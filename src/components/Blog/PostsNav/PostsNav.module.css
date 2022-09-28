@@ -1,0 +1,56 @@
+.navContainer{
+    width: 50%;
+    min-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    box-shadow: 0px 3px 5px rgba(28, 59, 59, 0.411);
+    position: sticky;
+    top: 65px;
+    transition: all 0.5s ease;
+    background-color: rgba(199, 199, 199, 0.767);
+    overflow-x: auto;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.navContainer > span{
+    white-space: nowrap;
+    border-top: none;
+    border-bottom: none;
+    font-weight: 600;
+    color: rgba(14, 11, 11, 0.671);
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+.navContainer > span:hover{
+    background-color: rgba(19, 19, 19, 0.24);
+}
+
+.navContainer > span:not(span:last-child){
+    border-right: none;
+}
+
+.navContainer > span:first-child{
+    border-left: none;
+}
+
+.navContainer > span:last-child{
+    border-right: none;
+}
+
+
+@media screen and (max-width: 800px){ 
+    .navContainer{
+        min-width: unset;
+        width: 100%;
+        transform: none;
+        border-radius: 0px;
+    }
+}
+
+@media screen and (max-width: 450px){ 
+    .navContainer{
+        font-size: 14px;
+    }
+}

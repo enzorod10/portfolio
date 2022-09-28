@@ -1,0 +1,175 @@
+*{
+    --light-paste: #F5E8E4;
+    --light-peach: #F5C7A9;
+    --orange: #D1512D;
+    --purple: #411530;
+}
+
+.homePageContainer{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.postContainer{
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    width: 50%;
+    min-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 10px;
+}
+
+.postsHeader{
+    box-sizing: border-box;
+    width: 50%;
+    min-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainPost{
+    box-sizing: border-box;
+    display: flex;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    gap: 20px;
+    height: 200px;
+    max-height: 200px;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.mainPost:hover,
+.otherPost:hover{
+    background-color: rgba(39, 74, 85, 0.116);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.mainPostImage > img{
+    height: 100%;
+    border-radius: 5px;
+}
+
+.mainPostContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.mainPostTitle{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.mainPostSummary{
+    font-size: 17px;
+    max-height: 70%;
+    overflow-y: auto;
+}
+
+.mainPostDate{
+    font-size: 14px;
+    font-style: italic;
+}
+
+.otherPost{
+    box-sizing: border-box;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 200px;
+    background-color: white;
+    max-height: 200px;
+    border-radius: 5px;
+}
+
+.otherPost:last-child{
+    margin-bottom: 10px;
+}
+
+.otherPostImage > img{
+    height: 100%;
+    border-radius: 5px;
+}
+
+.otherPostContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.otherPostTitle{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.otherPostSummary{
+    font-size: 17px;
+    max-height: 70%;
+    overflow-y: auto;
+}
+
+
+.otherPostDate{
+    font-size: 14px;
+    font-style: italic;
+}
+
+@media screen and (max-width: 800px){
+    .postContainer{
+        min-width: unset;
+        width: 100%;
+        padding: 0% 2%;
+    }
+
+    .postsHeader{
+        min-width: unset;
+        width: 100%;
+        padding: 0% 2%;
+    }
+
+    .mainPost,
+    .otherPost{
+        padding: 5px;
+        max-width: 100vw;
+        height: 100px;
+        gap: 10px;
+    }
+
+    .mainPostContent,
+    .otherPostContent{
+        gap: 3px;
+    }
+
+    .mainPostTitle{
+        font-size: 15px;
+    }
+
+    .mainPostSummary,
+    .otherPostSummary{
+        display: none;
+    }
+
+    .otherPostTitle{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 800px){
+}
+
+/* @media screen and (max-width: 600px){ */
+    /* .mainPostSummary,
+    .otherPostSummary{
+        display: none;
+    }
+} */

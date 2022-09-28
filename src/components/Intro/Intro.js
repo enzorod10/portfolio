@@ -1,0 +1,72 @@
+import folderIcon from '../.././assets/folderIcon.png'
+import mailIcon from '../.././assets/mailIcon.png'
+import githubIcon from '../.././assets/githubIcon.png'
+import linkedinIcon from '../.././assets/linkedinIcon.png'
+import aboutIcon from '../.././assets/aboutIcon.png'
+
+function Intro(props){
+    return(
+        <div className="introSection">
+        <div className='nameAndTitle'>
+          <div className='name'>
+            <span className='fullName'>
+              <span className='firstName'><span className='initialLetter'>E</span><span className='remainingLetters'>NZO</span></span>
+              <span className='lastName'><span className='initialLetter'>R</span><span className='remainingLetters'>ODRIGUEZ </span></span>
+            </span>
+            <span className='nameLine'>
+              <div className='hangingLinks'>
+                <div className='link'>
+                  <div className='hanger'></div>
+                  <div className='icon' onClick={() => props.scrollIntoDiv('about')}> 
+                    <img src={aboutIcon} alt='About icon' />
+                  </div>
+                </div>
+                <div className='link'>
+                  <div className='hanger'></div>
+                  <div className='icon' onClick={() => props.scrollIntoDiv('projects')}> 
+                    <img src={folderIcon} alt='Folder icon' />
+                  </div>
+                </div>
+                <div className='link'>
+                  <div className='hanger'></div>
+                  <div className='icon' onClick={() => props.scrollIntoDiv('contact')}> 
+                    <img src={mailIcon} alt='Mail icon' />
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div className='title'>
+            <span className='titleLine'>
+              <div className='hangingLinks'>
+                <div className='link'>
+                  <div className='hanger'></div>
+                  <div className='icon'>
+                    <img src={githubIcon} alt='Github icon' />
+                  </div>
+                </div>
+                <div className='link'>
+                  <div className='hanger'></div>
+                  <div className='icon'>
+                    <img src={linkedinIcon} alt='Linkedin icon' />
+                  </div>
+                </div>
+                <div className='link'>
+                  <div className='hanger'></div>
+                  <div className='icon'>
+                    <img src={githubIcon} alt='Github icon' />
+                  </div>
+                </div>
+              </div>
+            </span>
+            <span className='fullTitle' style={{display: 'inline-flex', float: 'right', marginLeft: 'auto'}}>
+              <span className='firstTitle'><span className='initialLetter'>W</span><span className='remainingLetters'>EB</span></span>
+              <span className='secondTitle'><span className='initialLetter'>D</span><span className='remainingLetters'>EVELOPER</span></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    )
+}
+
+export default Intro;
