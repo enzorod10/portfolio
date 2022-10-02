@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.dc33a495.css",
-    "main.js": "/portfolio/static/js/main.44005017.js",
-    "static/media/SOLTERACT_VIDEO.gif": "/portfolio/static/media/SOLTERACT_VIDEO.71de42c806f24bf3f7d7.gif",
-    "static/media/Montserrat-Regular.ttf": "/portfolio/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
-    "static/media/sampleImage.png": "/portfolio/static/media/sampleImage.823c1dea96abe4586821.png",
-    "static/media/mongodbIcon.svg": "/portfolio/static/media/mongodbIcon.6835c61a518a732eb8318d43dfe8f700.svg",
-    "static/media/nodejsIcon.svg": "/portfolio/static/media/nodejsIcon.93875c5d196422272be4ec4f21cf50e9.svg",
-    "static/media/reactIcon.svg": "/portfolio/static/media/reactIcon.4e0c97009b885bfa75c5412262a46f5f.svg",
-    "static/media/javascriptIcon.svg": "/portfolio/static/media/javascriptIcon.4c1b5332c1b1057928f6f06cf972c91c.svg",
-    "static/media/cssIcon.svg": "/portfolio/static/media/cssIcon.39769a8bd378bf410d6b381a8d88fa35.svg",
-    "static/media/gitIcon.svg": "/portfolio/static/media/gitIcon.c08353563539c6459b353f29d8dd7bf2.svg",
-    "static/media/vscodeIcon.svg": "/portfolio/static/media/vscodeIcon.3e91ebeb866625ec0bf6afdccff4020c.svg",
-    "static/media/tailwindIcon.svg": "/portfolio/static/media/tailwindIcon.e7b4a92d5aefbddd6f0651c024144be2.svg",
-    "static/media/htmlIcon.svg": "/portfolio/static/media/htmlIcon.8664168d5bc90b1a24396f85aadbf623.svg",
-    "static/media/webpackIcon.svg": "/portfolio/static/media/webpackIcon.8ed2785e6fb39bf5258a6b702b306bb6.svg",
-    "index.html": "/portfolio/index.html",
-    "static/media/firebaseIcon.svg": "/portfolio/static/media/firebaseIcon.0d5ec3e60614ea8e4d7abbf0729e969b.svg",
-    "main.dc33a495.css.map": "/portfolio/static/css/main.dc33a495.css.map",
-    "main.44005017.js.map": "/portfolio/static/js/main.44005017.js.map"
+    "main.css": "/static/css/main.78920304.css",
+    "main.js": "/static/js/main.b9f359f0.js",
+    "static/media/SOLTERACT_VIDEO.gif": "/static/media/SOLTERACT_VIDEO.71de42c806f24bf3f7d7.gif",
+    "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
+    "static/media/sampleImage.png": "/static/media/sampleImage.823c1dea96abe4586821.png",
+    "static/media/mongodbIcon.svg": "/static/media/mongodbIcon.6835c61a518a732eb8318d43dfe8f700.svg",
+    "static/media/nodejsIcon.svg": "/static/media/nodejsIcon.93875c5d196422272be4ec4f21cf50e9.svg",
+    "static/media/reactIcon.svg": "/static/media/reactIcon.4e0c97009b885bfa75c5412262a46f5f.svg",
+    "static/media/javascriptIcon.svg": "/static/media/javascriptIcon.4c1b5332c1b1057928f6f06cf972c91c.svg",
+    "static/media/cssIcon.svg": "/static/media/cssIcon.39769a8bd378bf410d6b381a8d88fa35.svg",
+    "static/media/gitIcon.svg": "/static/media/gitIcon.c08353563539c6459b353f29d8dd7bf2.svg",
+    "static/media/vscodeIcon.svg": "/static/media/vscodeIcon.3e91ebeb866625ec0bf6afdccff4020c.svg",
+    "static/media/tailwindIcon.svg": "/static/media/tailwindIcon.e7b4a92d5aefbddd6f0651c024144be2.svg",
+    "static/media/htmlIcon.svg": "/static/media/htmlIcon.8664168d5bc90b1a24396f85aadbf623.svg",
+    "static/media/webpackIcon.svg": "/static/media/webpackIcon.8ed2785e6fb39bf5258a6b702b306bb6.svg",
+    "index.html": "/index.html",
+    "static/media/firebaseIcon.svg": "/static/media/firebaseIcon.0d5ec3e60614ea8e4d7abbf0729e969b.svg",
+    "main.78920304.css.map": "/static/css/main.78920304.css.map",
+    "main.b9f359f0.js.map": "/static/js/main.b9f359f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc33a495.css",
-    "static/js/main.44005017.js"
+    "static/css/main.78920304.css",
+    "static/js/main.b9f359f0.js"
   ]
 }
