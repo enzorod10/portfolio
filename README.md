@@ -21,7 +21,7 @@
     <a href="https://github.com/enzorod10/portfolio"><strong>Explore the docs»</strong></a>
     <br />
     <br />
-    <a href="https://enzorod">View Demo</a>
+    <a href="https://enzorod.com">View Demo</a>
     ·
     <a href="https://github.com/enzorod10/portfolio/issues">Report Bug</a>
     ·
