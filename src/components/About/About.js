@@ -9,9 +9,9 @@ import nodejsIcon from '../.././assets/stackImages/nodejsIcon.svg'
 import mongodbIcon from '../.././assets/stackImages/mongodbIcon.svg'
 import gitIcon from '../.././assets/stackImages/gitIcon.svg'
 import webpackIcon from '../.././assets/stackImages/webpackIcon.svg'
+import jestIcon from '../.././assets/stackImages/jestIcon.svg'
 import firebaseIcon from '../.././assets/stackImages/firebaseIcon.svg'
 import tailwindIcon from '../.././assets/stackImages/tailwindIcon.svg'
-import vscodeIcon from '../.././assets/stackImages/vscodeIcon.svg'
 import { uid } from "uid";
 import { DateTime } from 'luxon'; 
 import { useEffect, useState } from 'react';
@@ -103,12 +103,20 @@ function About(){
                         <div className={styles.techText}>JS</div>
                     </div>
                     <div className={styles.techIconContainer}>
+                        <img className={styles.techIcon} src={reactIcon} alt='react'/>
+                        <div className={styles.techText}>React</div>
+                    </div>
+                    <div className={styles.techIconContainer}>
                         <img className={styles.techIcon} src={nodejsIcon} alt='nodejs'/>
                         <div className={styles.techText}>NodeJS</div>
                     </div>
                     <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={reactIcon} alt='react'/>
-                        <div className={styles.techText}>React</div>
+                        <img className={styles.techIcon} src={jestIcon} alt='jest'/>
+                        <div className={styles.techText}>Jest</div>
+                    </div>
+                    <div className={styles.techIconContainer}>
+                        <img className={styles.techIcon} src={webpackIcon} alt='webpack'/>
+                        <div className={styles.techText}>Webpack</div>
                     </div>
                     <div className={styles.techIconContainer}>
                         <img className={styles.techIcon} src={gitIcon} alt='git'/>
@@ -119,20 +127,12 @@ function About(){
                         <div className={styles.techText}>MongoDB</div>
                     </div>
                     <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={webpackIcon} alt='webpack'/>
-                        <div className={styles.techText}>Webpack</div>
-                    </div>
-                    <div className={styles.techIconContainer}>
                         <img className={styles.techIcon} src={tailwindIcon} alt='tailwind'/>
                         <div className={styles.techText}>Tailwind</div>
                     </div>
                     <div className={styles.techIconContainer}>
                         <img className={styles.techIcon} src={firebaseIcon} alt='firebase'/>
                         <div className={styles.techText}>Firebase</div>
-                    </div>
-                    <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={vscodeIcon} alt='vscode'/>
-                        <div className={styles.techText}>VSCode</div>
                     </div>
                 </div>
             </div>

@@ -12,19 +12,19 @@ import Project4 from './components/Project4/Project4';
 function App() {
   const [viewMode, setViewMode] = useState({
     project1: {
-      computer: true,
-      tablet: false,
+      computer: false,
+      tablet: true,
       smartphone: false
     },
     project2: {
-      computer: true,
+      computer: false,
       tablet: false,
-      smartphone: false
+      smartphone: true
     },
     project3: {
-      computer: true,
+      computer: false,
       tablet: false,
-      smartphone: false
+      smartphone: true
     },
     project4: {
       computer: true,
@@ -33,60 +33,53 @@ function App() {
     }
   })
 
+    // Depending on scroll location, header will hide or show
+
+    useEffect(() => {
+      const location = document.querySelector('.aboutSection').getBoundingClientRect().top
+      if (location < 0){
+        document.querySelector('.header').classList.remove('hide')
+      }
+      window.addEventListener('scroll', handleScroll, { passive: true })
+      return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+  
+    const handleScroll = () => {
+      const location = document.querySelector('.aboutSection').getBoundingClientRect().top
+      if (location > 285 && !document.querySelector('.header').classList.contains('hide')){
+        document.querySelector('.header').classList.add('hide')
+      } 
+      else if (location < 220 && document.querySelector('.header').classList.contains('hide')){
+        document.querySelector('.header').classList.remove('hide')
+      }
+    }
+
+    const scrollIntoDiv = destination => {
+      if (destination === 'home'){
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+      }
+      if (destination === 'about'){
+        const location = document.querySelector('.header').classList.contains('hide') ? document.querySelector('.aboutSection').getBoundingClientRect().top + window.scrollY - 0.6 : document.querySelector('.aboutSection').getBoundingClientRect().top + window.scrollY - 65;
+        window.scrollTo({top: location, behavior: 'smooth'})
+      }
+      if (destination === 'projects'){
+        const location = document.querySelector('.header').classList.contains('hide') ? document.querySelector('.mainSection').getBoundingClientRect().top + window.scrollY - 30 : document.querySelector('.mainSection').getBoundingClientRect().top + window.scrollY - 65;
+        window.scrollTo({top: location, behavior: 'smooth'})
+      }
+      if (destination === 'contact'){
+        const location = document.querySelector('.header').classList.contains('hide') ? document.querySelector('.contactSection').getBoundingClientRect().top + window.scrollY - 30 : document.querySelector('.contactSection').getBoundingClientRect().top + window.scrollY - 65;
+        window.scrollTo({top: location, behavior: 'smooth'})
+      }
+    }
+
+  // For smaller screen widths, expand/collapse system on projects
+
   const [expandedProject, setExpandedProject] = useState({
     project1: false,
     project2: false,
     project3: false,
     project4: false,
   })
-
-  const projectMedia = {
-    project1: {
-      computer: '',
-      tablet: '',
-      smartphone: ''
-    }
-  }
-
-  const selectDifferentView = (project, selectedDevice) => {
-      let tempViewMode = viewMode;
-      let count = 0;
-      for (let i in tempViewMode[project]){
-        i === selectedDevice ? tempViewMode[project][i] = true : tempViewMode[project][i] = false;
-        count++;
-        if (count === 2){
-          setViewMode({...tempViewMode})
-        }
-      }
-  }
-
-  const scrollIntoDiv = destination => {
-    if (destination === 'home'){
-      window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
-    }
-    if (destination === 'about'){
-      const location = document.querySelector('.header').classList.contains('hide') ? document.querySelector('.aboutSection').getBoundingClientRect().top + window.scrollY - 0.6 : document.querySelector('.aboutSection').getBoundingClientRect().top + window.scrollY - 65;
-      window.scrollTo({top: location, behavior: 'smooth'})
-    }
-    if (destination === 'projects'){
-      const location = document.querySelector('.header').classList.contains('hide') ? document.querySelector('.mainSection').getBoundingClientRect().top + window.scrollY - 30 : document.querySelector('.mainSection').getBoundingClientRect().top + window.scrollY - 65;
-      window.scrollTo({top: location, behavior: 'smooth'})
-    }
-    if (destination === 'contact'){
-      const location = document.querySelector('.header').classList.contains('hide') ? document.querySelector('.contactSection').getBoundingClientRect().top + window.scrollY - 30 : document.querySelector('.contactSection').getBoundingClientRect().top + window.scrollY - 65;
-      window.scrollTo({top: location, behavior: 'smooth'})
-    }
-  }
-
-  const handleScroll = () => {
-    const location = document.querySelector('.aboutSection').getBoundingClientRect().top
-    if (location > 285 && !document.querySelector('.header').classList.contains('hide')){
-      document.querySelector('.header').classList.add('hide')
-    } 
-    else if (location < 220 && document.querySelector('.header').classList.contains('hide')){
-      document.querySelector('.header').classList.remove('hide')
-    }
-  }
 
   const handleExpandCollapse = (projectName) => {
     let tempExpandedProject = {...expandedProject}
@@ -102,14 +95,17 @@ function App() {
     setExpandedProject(tempExpandedProject)
   }
 
-  useEffect(() => {
-    const location = document.querySelector('.aboutSection').getBoundingClientRect().top
-    if (location < 0){
-      document.querySelector('.header').classList.remove('hide')
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const selectDifferentView = (project, selectedDevice) => {
+      let tempViewMode = JSON.parse(JSON.stringify(viewMode));
+      let count = 0;
+      for (let i in tempViewMode[project]){
+        i === selectedDevice ? tempViewMode[project][i] = true : tempViewMode[project][i] = false;
+        count++;
+        if (count === 2){
+          setViewMode({...tempViewMode})
+        }
+      }
+  }
 
   return (
     <div className="App">

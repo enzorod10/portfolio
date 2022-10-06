@@ -396,7 +396,7 @@ html,body{
 
 .project{
     display: flex;
-    height: 600px;
+    min-height: 600px;
     justify-content: center;
     width: 100%;
     align-items: center;
@@ -405,7 +405,6 @@ html,body{
     box-sizing: border-box;
     z-index: 1;
     box-shadow: 0px 1px 3px 2px black;
-    
 }
 
 .projectGif{
@@ -418,12 +417,15 @@ html,body{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     width: 100%;
+    transition: all 0.5s ease !important;
+
 }
 
 .selectProjectView{
     display: flex;
+    flex-direction: row-reverse;
     width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(77, 105, 131, 0.397);
 }
 
 .viewIcon{
@@ -439,17 +441,17 @@ html,body{
     width: 24px;
 }
 
-.selectProjectView > div:nth-child(1),
-.selectProjectView > div:nth-child(2){
+.selectProjectView > div:nth-child(2),
+.selectProjectView > div:nth-child(3){
     border-right: 1px rgb(255, 255, 255) solid;
 }
 
 .selectProjectView > div:nth-child(1){
-    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .selectProjectView > div:nth-child(3){
-    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 .projectInfo{
@@ -500,7 +502,7 @@ html,body{
     display: flex;
     height: 25%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 /* --------- Contact Section --------- */
@@ -554,6 +556,23 @@ html,body{
     border: none;
     min-width: 350px;
     width: 23%;
+    -webkit-appearance: none;
+}
+
+/* global */
+
+.techIconContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--deep-black);
+}
+
+.techIcon{
+    width: 32px;
 }
 
 @media screen and (max-width: 1300px){
@@ -776,6 +795,7 @@ html,body{
     }
 
     .project{
+        min-height: 0px;
         box-sizing: border-box;
         box-shadow: none;
         height: 100%;

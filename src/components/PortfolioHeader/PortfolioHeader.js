@@ -36,7 +36,6 @@ function PortfolioHeader(props){
   const mobileDirectoryChildStyle = {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
     fontWeight: 800,
     fontSize: 25,
     textDecoration: 'underline',
