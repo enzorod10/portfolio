@@ -43,8 +43,6 @@
     background-color: white;
     margin-top: 10px;
     border-radius: 5px;
-    -webkit-appearance: none;
-
 }
 
 .mainPost:hover,
@@ -91,7 +89,6 @@
     background-color: white;
     max-height: 200px;
     border-radius: 5px;
-    -webkit-appearance: none;
 }
 
 .otherPost:last-child{

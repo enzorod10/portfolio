@@ -11,6 +11,11 @@
     font-family: 'customFont';
 }
 
+button{
+    color: none;
+    background-color: none;
+}
+
 @font-face{
     font-family: customFont;
     src: url('./assets/fonts/Montserrat-Regular.ttf')
@@ -556,7 +561,6 @@ html,body{
     border: none;
     min-width: 350px;
     width: 23%;
-    -webkit-appearance: none;
 }
 
 /* global */

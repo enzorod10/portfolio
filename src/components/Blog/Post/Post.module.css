@@ -77,7 +77,6 @@
     border: none;
     border-bottom: 1px black solid;
     padding: 5px;
-    -webkit-appearance: none;
 }
 
 textarea{
