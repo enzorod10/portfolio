@@ -3,8 +3,12 @@ import mailIcon from '../.././assets/mailIcon.png'
 import githubIcon from '../.././assets/githubIcon.png'
 import linkedinIcon from '../.././assets/linkedinIcon.png'
 import aboutIcon from '../.././assets/aboutIcon.png'
+import blogIcon from '../.././assets/blogIcon.png'
+import { useNavigate } from 'react-router-dom'
 
 function Intro(props){
+  const navigate = useNavigate();
+
     return(
         <div className="introSection">
         <div className='nameAndTitle'>
@@ -41,21 +45,25 @@ function Intro(props){
               <div className='hangingLinks'>
                 <div className='link'>
                   <div className='hanger'></div>
-                  <div className='icon'>
-                    <img src={githubIcon} alt='Github icon' />
-                  </div>
+                  <a href={'https://github.com/enzorod10'}>
+                    <div className='icon'>
+                      <img src={githubIcon} alt='Github icon' />
+                    </div>
+                  </a>
                 </div>
+                  <div className='link'>
+                    <div className='hanger'></div>
+                    <a href={'https://linkedin.com/in/enzo-rod'}>
+                      <div className='icon'>
+                        <img src={linkedinIcon} alt='Linkedin icon' />
+                      </div>
+                    </a>
+                  </div>
                 <div className='link'>
                   <div className='hanger'></div>
-                  <div className='icon'>
-                    <img src={linkedinIcon} alt='Linkedin icon' />
-                  </div>
-                </div>
-                <div className='link'>
-                  <div className='hanger'></div>
-                  <div className='icon'>
-                    <img src={githubIcon} alt='Github icon' />
-                  </div>
+                    <div className='icon' onClick={() => navigate('/blog')}>
+                      <img src={blogIcon} alt='Blog icon' />
+                    </div>
                 </div>
               </div>
             </span>

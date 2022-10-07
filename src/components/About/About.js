@@ -12,6 +12,7 @@ import webpackIcon from '../.././assets/stackImages/webpackIcon.svg'
 import jestIcon from '../.././assets/stackImages/jestIcon.svg'
 import firebaseIcon from '../.././assets/stackImages/firebaseIcon.svg'
 import tailwindIcon from '../.././assets/stackImages/tailwindIcon.svg'
+import loadingIcon from '../.././assets/loadingIcon.gif'
 import { uid } from "uid";
 import { DateTime } from 'luxon'; 
 import { useEffect, useState } from 'react';
@@ -19,6 +20,7 @@ import { useEffect, useState } from 'react';
 function About(){
     const [ posts, setPosts ] = useState([]);
     const [ modifiedPosts, setModifiedPosts ] = useState(null);
+    const [ loadingPosts, setLoadingPosts ] = useState(true)
 
     let navigate = useNavigate();
 
@@ -55,6 +57,7 @@ function About(){
                     .then(response => {
                         const image = URL.createObjectURL(response)
                         modifiedPost.media = image
+                        setLoadingPosts(false)
                     })
 
                     return modifiedPost
@@ -141,7 +144,15 @@ function About(){
                     <div className={styles.blogSectionTitle}>
                         Recent Blog Posts
                     </div>
-                    {modifiedPosts && modifiedPosts.map(post => {
+                    {loadingPosts ? <div className={styles.blog}>
+                        <img style={{height: '20px', width: '20px'}}src={loadingIcon} alt={'loadingIcon'}/>
+                        <div className={styles.blogInfo}>
+                            <div>
+                                Loading Posts...
+                            </div>
+                        </div>
+                    </div> :
+                    modifiedPosts && modifiedPosts.map(post => {
                         return(
                             <div onClick={() => navigate(`blog/post/${post._id}`)}key={uid()}className={styles.blog}>
                                 <img className={styles.blogImage} src={post.media} alt={post.title}/>

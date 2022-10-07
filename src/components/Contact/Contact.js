@@ -26,7 +26,7 @@ function Contact(){
             <input required={true} name='email' placeholder='Email' className='contactSectionEmail' type='email'/>
             <textarea required={true} name='message' placeholder='Message' className='contactSectionMessage' type='text' style={{resize: 'none'}}/>
             <div style={popUpMessageStyle}>
-                {state.submitting && 'Sending...'}
+                {state.submitting && '...'}
                 {state.succeeded && 'Message sent!'}
             </div>
             <button type='submit' disabled={state.submitting} className='sendButton'>

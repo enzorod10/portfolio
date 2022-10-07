@@ -120,7 +120,7 @@ function RouteSwitch(){
                     <form className={styles.newCommentForm}>
                         <input ref={newCommentNameInput} value={newComment && newComment.author} maxLength={25} required onChange={e => setNewComment({...newComment, author: e.target.value})} placeholder='Name' id="name" />
                         <textarea ref={newCommentContentInput} value={newComment && newComment.content} maxLength={1000} required onChange={e => setNewComment({...newComment, content: e.target.value})} placeholder='Write a comment..'/>
-                        <button onClick={e => handleSubmitComment(e)} style={{cursor: 'pointer', padding: '5px 10px', borderRadius: '5px', border: 'none'}}>Submit</button>
+                        <button onClick={e => handleSubmitComment(e)} style={{cursor: 'pointer', padding: '5px 10px', borderRadius: '5px', border: 'none', color: 'black'}}>Submit</button>
                     </form>
 
                     <div className='comments' style={{display: 'flex', flexDirection: 'column', gap: '10px', zIndex: '1', position: 'relative' }}>

@@ -53,11 +53,11 @@ function Header(){
         height: 'calc(100vh - 65px)',
         top: 0,
         margin: '65px 0px',
+        paddingTop: '50px',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
         background: 'rgba(270, 270, 270, 1)',
-        gap: '100px',
+        gap: '50px',
         animation: 'expandList 0.5s',
         zIndex: '2'
     }
