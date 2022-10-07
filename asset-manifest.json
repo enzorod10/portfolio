@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.14f20337.css",
-    "main.js": "/static/js/main.acc2f31e.js",
+    "main.css": "/static/css/main.8ea0aa6e.css",
+    "main.js": "/static/js/main.21e3806f.js",
     "static/media/ispy_gif_tablet.gif": "/static/media/ispy_gif_tablet.0a2c0a9ab4b0fa1129c3.gif",
     "static/media/ispy_gif_computer.gif": "/static/media/ispy_gif_computer.26c7c05a58a7c166fcf1.gif",
     "static/media/ispy_gif_smartphone.gif": "/static/media/ispy_gif_smartphone.451c8bec46537aa35f2a.gif",
@@ -16,6 +16,7 @@
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
     "static/media/cv_project_gif_computer.gif": "/static/media/cv_project_gif_computer.f72fddc0730f5efa97e7.gif",
     "static/media/sampleImage.png": "/static/media/sampleImage.823c1dea96abe4586821.png",
+    "static/media/loadingIcon.gif": "/static/media/loadingIcon.3ab961f056145196ad96.gif",
     "static/media/mongodbIcon.svg": "/static/media/mongodbIcon.6835c61a518a732eb8318d43dfe8f700.svg",
     "static/media/jestIcon.svg": "/static/media/jestIcon.19f1f902afdd6d48345325d83d8ed33b.svg",
     "static/media/nodejsIcon.svg": "/static/media/nodejsIcon.93875c5d196422272be4ec4f21cf50e9.svg",
@@ -28,11 +29,11 @@
     "static/media/webpackIcon.svg": "/static/media/webpackIcon.8ed2785e6fb39bf5258a6b702b306bb6.svg",
     "index.html": "/index.html",
     "static/media/firebaseIcon.svg": "/static/media/firebaseIcon.0d5ec3e60614ea8e4d7abbf0729e969b.svg",
-    "main.14f20337.css.map": "/static/css/main.14f20337.css.map",
-    "main.acc2f31e.js.map": "/static/js/main.acc2f31e.js.map"
+    "main.8ea0aa6e.css.map": "/static/css/main.8ea0aa6e.css.map",
+    "main.21e3806f.js.map": "/static/js/main.21e3806f.js.map"
   },
   "entrypoints": [
-    "static/css/main.14f20337.css",
-    "static/js/main.acc2f31e.js"
+    "static/css/main.8ea0aa6e.css",
+    "static/js/main.21e3806f.js"
   ]
 }
