@@ -10,8 +10,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  
-  Logo here
 
 <h3 align="center">Enzo Rodriguez Personal Website</h3>
 
@@ -34,14 +32,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#portfolio">About The Project</a>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -51,48 +42,16 @@
   </ol>
 </details>
 
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
+## Portfolio
 
 <div align='center'>
 
-Image here
+![main](https://user-images.githubusercontent.com/93365813/194495872-c1584b65-4eb3-4ac3-b72e-b1b720bff93f.png)
 
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-Have node package manager (npm) installed
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/enzorod10/portfolio.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-3. Start the application
-   ```sh
-   npm start
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
