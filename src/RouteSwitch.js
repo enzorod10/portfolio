@@ -17,6 +17,23 @@ function RouteSwitch(){
     )
 }
 
-window.onresize = function() {  	window.location.reload(); };
+let windowWidth = 0
+
+window.onload = function(){
+    windowWidth = window.innerWidth
+}
+
+window.onresize = function(){ 
+    if (window.innerWidth <= 760 && windowWidth > 760){
+        window.location.reload();
+    }
+    if (window.innerWidth > 760 && windowWidth <= 760){
+        window.location.reload();
+    }
+}
+
+window.onorientationchange = (event) => {
+    window.location.reload();
+};
 
 export default RouteSwitch;

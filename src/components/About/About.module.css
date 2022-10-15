@@ -14,12 +14,14 @@
 .fullPage > div{
     width: 2000px;
     max-width: 100%;
-    justify-content: center;
     margin: 0 auto;
+    justify-content: center;
+
 }
 
 .top{
     display: flex;
+    gap: 35px;
 }
 
 .image{
@@ -28,7 +30,6 @@
 }
 
 .leftSide{
-    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +49,7 @@
 
 .infoBody{
     font-size: 3vmin;
+    max-width: 800px;
 }
 
 .infoCloser{
@@ -223,7 +225,8 @@
     }
 
     .middle,
-    .bottom{
+    .bottom,
+    .top{
         justify-content: flex-start;
         padding: 0px 4%;
     }
