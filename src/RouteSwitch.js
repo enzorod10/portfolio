@@ -17,6 +17,6 @@ function RouteSwitch(){
     )
 }
 
-window.onorientationchange = function() {  	window.location.reload(); };
+window.onresize = function() {  	window.location.reload(); };
 
 export default RouteSwitch;
