@@ -84,7 +84,7 @@ function About(){
                         through code. 
                     </div>
                     <div className={styles.infoCloser}>
-                        Full bio <span style={{textDecoration: 'underline', cursor: 'pointer', textDecorationColor: '#007989'}} onClick={() => navigate('/blog/post/6345f14dbdfcf22a951dbadc')}>here</span>
+                        Full bio <span style={{textDecoration: 'underline', cursor: 'pointer', textDecorationColor: '#007989'}} onClick={() => navigate('/blog/post/634fb4cddcbe82f7bf2fa860')}>here</span>
                     </div>
                 </div>
             </div>
