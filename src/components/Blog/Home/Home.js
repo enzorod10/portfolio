@@ -51,16 +51,8 @@ function Home(){
         tempDisplayedPosts.forEach(post => {
             let tempDate = new Date(post.timestamp)
             post.modifiedDate = DateTime.fromJSDate(tempDate).toLocaleString(DateTime.DATE_FULL)
-            fetch(post.imageUrl)
-                .then(response => {
-                    return response.blob()    
-                })
-                .then(response => {
-                    const image = URL.createObjectURL(response)
-                    post.media = image
-                })
         })
-        setTimeout(() => setDisplayedPosts(tempDisplayedPosts), 500)
+        setDisplayedPosts(tempDisplayedPosts)
     }
 
     const loadNewTab = (newTabs) => {
@@ -83,7 +75,7 @@ function Home(){
                 displayedPosts.map(post => {
                     return displayedPosts.indexOf(post) === 0 ?
                         <li onClick={() => navigate(`/blog/post/${post._id}`)} key={uid()} className={styles.mainPost}>
-                            <img className={styles.mainPostImage} src={post.media} alt='Blog post'/>
+                            <img className={styles.mainPostImage} src={post.imageUrl} alt='Blog post'/>
                             <div className={styles.mainPostContent}>
                                 <div className={styles.mainPostTitle}>
                                     {post.title}
@@ -98,7 +90,7 @@ function Home(){
                         </li>
                     :
                     <li onClick={() => navigate(`/blog/post/${post._id}`)} key={uid()} className={styles.otherPost}>
-                        <img className={styles.otherPostImage} src={post.media} alt='Blog post'/> 
+                        <img className={styles.otherPostImage} src={post.imageUrl} alt='Blog post'/> 
                         <div className={styles.otherPostContent}>
                             <div className={styles.otherPostTitle}>
                                 {post.title}

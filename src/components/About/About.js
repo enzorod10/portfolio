@@ -45,24 +45,15 @@ function About(){
 
     useEffect(() => {
         if (posts.length > 0){
-            // Modifying date & fetching specfic post images from google cloud storage url (linked by mongodb)
+            // Modifying date
             let tempPosts = posts.map(post => {
                 const modifiedPost = { ...post}
                 let tempDate = new Date(post.timestamp)
                 modifiedPost.modifiedDate = DateTime.fromJSDate(tempDate).toLocaleString(DateTime.DATE_FULL)
-                fetch(post.imageUrl)
-                    .then(response => {
-                        return response.blob()
-                    })
-                    .then(response => {
-                        const image = URL.createObjectURL(response)
-                        modifiedPost.media = image
-                        setLoadingPosts(false)
-                    })
-
-                    return modifiedPost
+                return modifiedPost
             })
-            setTimeout(() => setModifiedPosts(tempPosts), 300)
+            setLoadingPosts(false)
+            setModifiedPosts(tempPosts)
         }
         
     }, [ posts ])
@@ -155,7 +146,7 @@ function About(){
                     modifiedPosts && modifiedPosts.map(post => {
                         return(
                             <div onClick={() => navigate(`blog/post/${post._id}`)}key={uid()}className={styles.blog}>
-                                <img className={styles.blogImage} src={post.media} alt={post.title}/>
+                                <img className={styles.blogImage} src={post.imageUrl} alt={post.title}/>
                                 <div className={styles.blogInfo}>
                                     <div className={styles.blogName}>
                                         {post.title}
