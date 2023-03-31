@@ -1,13 +1,14 @@
-import folderIcon from '../.././assets/folderIcon.png'
-import mailIcon from '../.././assets/mailIcon.png'
-import githubIcon from '../.././assets/githubIcon.png'
-import linkedinIcon from '../.././assets/linkedinIcon.png'
-import aboutIcon from '../.././assets/aboutIcon.png'
-import blogIcon from '../.././assets/blogIcon.png'
-import { useNavigate } from 'react-router-dom'
+import folderIcon from '../../../public/assets/folderIcon.png'
+import mailIcon from '../../../public/assets/mailIcon.png'
+import githubIcon from '../../../public/assets/githubIcon.png'
+import linkedinIcon from '../../../public/assets/linkedinIcon.png'
+import aboutIcon from '../../../public/assets/aboutIcon.png'
+import blogIcon from '../../../public/assets/blogIcon.png'
+import { useRouter } from 'next/router'
 
 function Intro(props){
-  const navigate = useNavigate();
+
+  const router = useRouter();
 
     return(
         <div className="introSection">
@@ -22,19 +23,19 @@ function Intro(props){
                 <div className='link'>
                   <div className='hanger'></div>
                   <div className='icon' onClick={() => props.scrollIntoDiv('about')}> 
-                    <img src={aboutIcon} alt='About icon' />
+                    <img src={aboutIcon.src} alt='About icon' />
                   </div>
                 </div>
                 <div className='link'>
                   <div className='hanger'></div>
                   <div className='icon' onClick={() => props.scrollIntoDiv('projects')}> 
-                    <img src={folderIcon} alt='Folder icon' />
+                    <img src={folderIcon.src} alt='Folder icon' />
                   </div>
                 </div>
                 <div className='link'>
                   <div className='hanger'></div>
                   <div className='icon' onClick={() => props.scrollIntoDiv('contact')}> 
-                    <img src={mailIcon} alt='Mail icon' />
+                    <img src={mailIcon.src} alt='Mail icon' />
                   </div>
                 </div>
               </div>
@@ -47,7 +48,7 @@ function Intro(props){
                   <div className='hanger'></div>
                   <a href={'https://github.com/enzorod10'}>
                     <div className='icon'>
-                      <img src={githubIcon} alt='Github icon' />
+                      <img src={githubIcon.src} alt='Github icon' />
                     </div>
                   </a>
                 </div>
@@ -55,14 +56,14 @@ function Intro(props){
                     <div className='hanger'></div>
                     <a href={'https://linkedin.com/in/enzo-rod'}>
                       <div className='icon'>
-                        <img src={linkedinIcon} alt='Linkedin icon' />
+                        <img src={linkedinIcon.src} alt='Linkedin icon' />
                       </div>
                     </a>
                   </div>
                 <div className='link'>
                   <div className='hanger'></div>
-                    <div className='icon' onClick={() => navigate('/blog')}>
-                      <img src={blogIcon} alt='Blog icon' />
+                    <div className='icon' onClick={() => router.push('/blog')}>
+                      <img src={blogIcon.src} alt='Blog icon' />
                     </div>
                 </div>
               </div>

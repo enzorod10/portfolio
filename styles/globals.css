@@ -13,7 +13,7 @@
 
 @font-face{
     font-family: customFont;
-    src: url('./assets/fonts/Montserrat-Regular.ttf')
+    src: url('/assets/fonts/Montserrat-Regular.ttf')
 }
 
 html,body{

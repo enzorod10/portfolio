@@ -1,4 +1,4 @@
-header{
+.header{
     display: flex;
     justify-content: space-between;
     height: 65px;
@@ -27,13 +27,13 @@ header{
 }
 
 @media screen and (max-width: 800px){
-    header{
+    .header{
         padding: 0px 20px;
     }
 }
 
 @media screen and (min-width: 800px){
-    header{
+    .header{
         font-weight: bold;
     }
 }

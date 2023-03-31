@@ -1,7 +1,7 @@
 import { useForm } from "@formspree/react";
 
 function Contact(){
-    const [ state, handleSubmit ] = useForm(process.env.REACT_APP_FORMSPREE_LINK)
+    const [ state, handleSubmit ] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_LINK);
 
     const popUpMessageStyle = {
         width: '350px',

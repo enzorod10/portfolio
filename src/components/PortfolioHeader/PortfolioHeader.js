@@ -1,11 +1,11 @@
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import blackLogo from '../.././assets/enzo-cs-logo-black.png'
-import menuIcon from '../.././assets/menuIcon.png'
+import blackLogo from '../../../public/assets/enzo-cs-logo-black.png'
+import menuIcon from '../../../public/assets/menuIcon.png'
 
 function PortfolioHeader(props){
-  const [menuDisplay, setMenuDisplay] = useState(false)
-  const navigate = useNavigate()
+  const router = useRouter();
+  const [menuDisplay, setMenuDisplay] = useState(false);
 
   useEffect(() => {
     if (menuDisplay){
@@ -65,9 +65,9 @@ function PortfolioHeader(props){
   return(
       <div className='header hide'>
         <div className='logo' onClick={handleLogoClick}>
-          <img src={blackLogo} alt='Enzo Logo' />
+          <img src={blackLogo.src} alt='Enzo Logo' />
         </div>
-        {window.screen.width > 800 ? 
+        {props.windowSize.width && props.windowSize.width > 800 ? 
           <div className='directory'>
             <div onClick={() => props.scrollIntoDiv('about')}>
               ABOUT
@@ -78,11 +78,11 @@ function PortfolioHeader(props){
             <div onClick={() => props.scrollIntoDiv('contact')}>
               CONTACT
             </div>
-            <div onClick={() => navigate('./blog')}>
+            <div onClick={() => router.push('./blog')}>
               BLOG
             </div>
           </div> :
-          <img onClick={toggleMenuDisplay} src={menuIcon} alt='Menu icon'/>
+          <img onClick={toggleMenuDisplay} src={menuIcon.src} alt='Menu icon'/>
         }
         {menuDisplay && <div className='mobileDirectory' style={mobileDirectoryStyle}>
           <div style={mobileDirectoryChildStyle} onClick={() => handleMobileMenuClick('about')}>
@@ -94,10 +94,10 @@ function PortfolioHeader(props){
           <div style={mobileDirectoryChildStyle} onClick={() => handleMobileMenuClick('contact')}>
             CONTACT
           </div>
-          <div style={mobileDirectoryChildStyle} onClick={() => navigate('./blog')}>
+          <div style={mobileDirectoryChildStyle} onClick={() => router.push('./blog')}>
             BLOG
           </div>
-          <div style={mobileDirectoryChildStyle} onClick={() => navigate('./blog')}>
+          <div style={mobileDirectoryChildStyle} onClick={() => router.push('./blog')}>
             GITHUB
           </div>
         </div>}
