@@ -1,4 +1,4 @@
-*{
+.fullPage{
     --sectionColor: color: rgb(44, 37, 37);
 }
 
@@ -79,7 +79,7 @@
     padding: 5px;
 }
 
-textarea{
+.textarea{
     resize: none;
 }
 

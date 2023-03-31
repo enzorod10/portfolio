@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import styles from './Header.module.css'
-import { useNavigate } from 'react-router-dom'
-import blackLogo from '../../.././assets/enzo-cs-logo-black.png'
-import menuIcon from '../../.././assets/menuIcon.png'
+import blackLogo from '../../../../public/assets/enzo-cs-logo-black.png'
+import menuIcon from '../../../../public/assets/menuIcon.png'
+import { useRouter } from "next/router";
 
-function Header(){
+function Header({ windowSize }){
     const [menuDisplay, setMenuDisplay] = useState(false)
-    const navigate = useNavigate()
+    const router = useRouter();
 
     useEffect(() => {
         if (menuDisplay){
@@ -79,26 +79,26 @@ function Header(){
       }
 
       const handleMobileMenuClick = (location) => {
-        navigate(location)
+        router.push(location)
         toggleMenuDisplay()
       }
 
     return(
-        <header>
-            <div style={{cursor: 'pointer'}} onClick={() => navigate('/blog')} className={styles.logo}>
-                <img src={blackLogo} alt='Enzo Logo' />
+        <header className={styles.header}>
+            <div style={{cursor: 'pointer'}} onClick={() => router.push('/blog')} className={styles.logo}>
+                <img src={blackLogo.src} alt='Enzo Logo' />
             </div>
-            {window.screen.width > 800 ?
+            {windowSize.width && windowSize.width > 800 ?
             <div className={styles.rightSide}>
-                <div onClick={() => navigate('/blog')} style={{cursor: 'pointer'}}>
+                <div onClick={() => router.push('/blog')} style={{cursor: 'pointer'}}>
                     POSTS
                 </div>
-                <div onClick={() => navigate('/')} style={{cursor: 'pointer'}}>
+                <div onClick={() => router.push('/')} style={{cursor: 'pointer'}}>
                     PORTFOLIO
                 </div>
-                {localStorage.getItem('token') ? <div style={{cursor: 'pointer'}} onClick={signOut}>SIGN OUT</div> : <div style={{cursor: 'pointer'}} onClick={() => navigate('/blog/log-in')}>LOG IN</div>} 
+                {localStorage.getItem('token') ? <div style={{cursor: 'pointer'}} onClick={signOut}>SIGN OUT</div> : <div style={{cursor: 'pointer'}} onClick={() => router.push('/blog/log-in')}>LOG IN</div>} 
             </div> :
-            <img onClick={toggleMenuDisplay} src={menuIcon} alt='Menu icon'/>}
+            <img onClick={toggleMenuDisplay} src={menuIcon.src} alt='Menu icon'/>}
             {menuDisplay && 
             <div className='mobileDirectory' style={mobileDirectoryStyle}>
                 <div style={mobileDirectoryChildStyle} onClick={() => handleMobileMenuClick('/blog')}>
@@ -107,7 +107,7 @@ function Header(){
                 <div style={mobileDirectoryChildStyle} onClick={() => handleMobileMenuClick('/')}>
                     PORTFOLIO
                 </div>
-                {localStorage.getItem('token') ? <div style={mobileDirectoryChildStyle} onClick={signOut}>SIGN OUT</div> : <div style={mobileDirectoryChildStyle} onClick={() => navigate('/blog/log-in')}>LOG IN</div>}
+                {localStorage.getItem('token') ? <div style={mobileDirectoryChildStyle} onClick={signOut}>SIGN OUT</div> : <div style={mobileDirectoryChildStyle} onClick={() => router.push('/blog/log-in')}>LOG IN</div>}
             </div>}
         </header>
     )

@@ -1,30 +1,30 @@
+import { useRouter } from "next/router.js";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import Header from './Header/Header.js'
+import Header from '../../src/components/Blog/Header/Header.js'
 
-function LogIn(){
+function LogIn({ windowSize }){
     const [ user, setUser ] = useState({
         username: '',
         password: ''
     })
     const [ errorMessage, setErrorMessage ] = useState('')
+    const router = useRouter();
 
     useEffect(() => {
         setErrorMessage('')
     }, [ user ])
 
-    const navigate = useNavigate()
 
     const handleAuthentication = ev => {
         ev.preventDefault()
-        fetch(`${process.env.REACT_APP_API_LINK}/log-in`, { mode: 'cors', method: 'post', headers: { "Content-Type": "application/json" }, body: JSON.stringify(user) })
+        fetch(`${process.env.NEXT_PUBLIC_API_LINK}/log-in`, { mode: 'cors', method: 'post', headers: { "Content-Type": "application/json" }, body: JSON.stringify(user) })
             .then(response => {
                 return response.json()
             })
             .then(response => {
                 if (response.token){
                     localStorage.setItem('token', response.token)
-                    navigate('/blog')
+                    router.push('/blog')
                 } else {
                     setErrorMessage('Username or password is incorrect')
                 }
@@ -33,7 +33,7 @@ function LogIn(){
     
     return(
         <div>
-            <Header/>
+            <Header windowSize={windowSize}/>
             <div style={{padding: '20px'}}>
                 <p style={{fontStyle: 'italic'}}>
                     For admin use only
