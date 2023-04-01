@@ -40,7 +40,7 @@ function Project4(props){
     return(
         <div  className='projectContainer'>
           <div className='project'>
-            <div style={{marginRight: '-30px'}} className='projectInfo'>
+            <div style={{marginRight: '-20px'}} className='projectInfo'>
               <div onClick={projectIntermission} style={{height: props.windowSize.width && props.windowSize.width <= 760 && !props.expandedProject.project4 && '35px' }} className='projectTitle'>
                 iSpy
                 {props.windowSize.width && props.windowSize.width <= 760 && (!props.expandedProject.project4 ? <img style={{position: 'absolute', right: '10%'}} src={expandIcon.src} alt='expand' /> : <img style={{position: 'absolute', right: '10%'}} src={collapseIcon.src} alt='collapse' />)}

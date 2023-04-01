@@ -57,7 +57,7 @@ function Project1(props){
                   <img src={mediaShown.src} alt='gif of project' />
                 </div>
               </div>}
-            <div style={{marginLeft: '-30px'}} className='projectInfo'>
+            <div style={{marginLeft: '-20px'}} className='projectInfo'>
               <div onClick={projectIntermission} style={{height: props.windowSize.width && props.windowSize.width <= 760 && !props.expandedProject.project1 && '35px' }} className='projectTitle'>
                 Solteract
                 {props.windowSize.width && props.windowSize.width <= 760 && (!props.expandedProject.project1 ? <img style={{position: 'absolute', right: '10%'}} src={expandIcon.src} alt='expand' /> : <img style={{position: 'absolute', right: '10%'}} src={collapseIcon.src} alt='collapse' />)}

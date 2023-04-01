@@ -40,7 +40,7 @@ function Project2(props){
     return(
         <div  className='projectContainer'>
           <div className='project'>
-            <div style={{marginRight: '-30px'}} className='projectInfo'>
+            <div style={{marginRight: '-20px'}} className='projectInfo'>
               <div onClick={projectIntermission} style={{height: props.windowSize.width && props.windowSize.width <= 760 && !props.expandedProject.project2 && '35px' }} className='projectTitle'>
                 Battleship: The Game
                 {props.windowSize.width && props.windowSize.width <= 760 && (!props.expandedProject.project2 ? <img style={{position: 'absolute', right: '10%'}} src={expandIcon.src} alt='expand' /> : <img style={{position: 'absolute', right: '10%'}} src={collapseIcon.src} alt='collapse' />)}

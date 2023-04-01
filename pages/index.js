@@ -7,6 +7,7 @@ import Project1 from '../src/components/Project1/Project1';
 import Project2 from '../src/components/Project2/Project2';
 import Project3 from '../src/components/Project3/Project3';
 import Project4 from '../src/components/Project4/Project4';
+import Project0 from '../src/components/Project0/Project0';
 
 export async function getStaticProps(){
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/posts`, { mode: 'cors' })
@@ -21,6 +22,11 @@ export async function getStaticProps(){
 
 function App({ windowSize, posts }) {
   const [viewMode, setViewMode] = useState({
+    project0: {
+      computer: false,
+      tablet: false,
+      smartphone: true
+    },
     project1: {
       computer: false,
       tablet: true,
@@ -90,6 +96,7 @@ function App({ windowSize, posts }) {
   // For smaller screen widths, expand/collapse system on projects
 
   const [expandedProject, setExpandedProject] = useState({
+    project0: false,
     project1: false,
     project2: false,
     project3: false,
@@ -131,10 +138,15 @@ function App({ windowSize, posts }) {
       </div>
       <div className='mainSection'>
         <div style={{display: windowSize.width && windowSize.width > 760 ? 'none' : 'block'}} className={'projectSectionHeader'}>Projects</div>
+        {/* <Project0 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/> */}
         <Project1 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
         <Project2 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
         <Project3 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
         <Project4 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
+        <div className='projectOverlay'>
+
+        </div>
+
       </div>
       <div className='contactSection'>
         <Contact />

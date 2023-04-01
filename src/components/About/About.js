@@ -11,6 +11,9 @@ import webpackIcon from '../../../public/assets/stackImages/webpackIcon.svg';
 import jestIcon from '../../../public/assets/stackImages/jestIcon.svg';
 import firebaseIcon from '../../../public/assets/stackImages/firebaseIcon.svg';
 import tailwindIcon from '../../../public/assets/stackImages/tailwindIcon.svg';
+import nextjsIcon from '../../../public/assets/stackImages/nextjsIcon.svg';
+import reduxIcon from '../../../public/assets/stackImages/reduxIcon.svg';
+import typescriptIcon from '../../../public/assets/stackImages/typescriptIcon.svg';
 import loadingIcon from '../../../public/assets/loadingIcon.gif';
 import { uid } from "uid";
 import { DateTime } from 'luxon'; 
@@ -51,7 +54,7 @@ function About({ posts }){
                     <div className={styles.infoBody}>
                         I'm Enzo Rodriguez, a New Jersey-based frontend developer with experience
                         in the backend. I enjoy bringing ideas to life in the browser 
-                        through code. 
+                        through code.
                     </div>
                     <div className={styles.infoCloser}>
                         Full bio <span style={{textDecoration: 'underline', cursor: 'pointer', textDecorationColor: '#007989'}} onClick={() => router.push('/blog/post/634fb4cddcbe82f7bf2fa860')}>here</span>
@@ -64,49 +67,55 @@ function About({ posts }){
                         Languages & Tools
                     </div>
                     <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={htmlIcon.src} alt='html'/>
-                        <div className={styles.techText}>HTML</div>
+                        <img className={styles.techIcon} src={typescriptIcon.src} alt='typescript'/>
+                        <div className={styles.techText}>TypeScript</div>
                     </div>
                     <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={cssIcon.src} alt='css'/>
-                        <div className={styles.techText}>CSS</div>
-                    </div>
-                    <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={javascriptIcon.src} alt='javascript'/>
-                        <div className={styles.techText}>JS</div>
+                        <img className={styles.techIcon} src={nextjsIcon.src} alt='nextjs'/>
+                        <div className={styles.techText}>NextJs</div>
                     </div>
                     <div className={styles.techIconContainer}>
                         <img className={styles.techIcon} src={reactIcon.src} alt='react'/>
                         <div className={styles.techText}>React</div>
                     </div>
                     <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={nodejsIcon.src} alt='nodejs'/>
-                        <div className={styles.techText}>NodeJS</div>
+                        <img className={styles.techIcon} src={reduxIcon.src} alt='redux'/>
+                        <div className={styles.techText}>Redux</div>
                     </div>
                     <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={jestIcon.src} alt='jest'/>
-                        <div className={styles.techText}>Jest</div>
-                    </div>
-                    <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={webpackIcon.src} alt='webpack'/>
-                        <div className={styles.techText}>Webpack</div>
-                    </div>
-                    <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={gitIcon.src} alt='git'/>
-                        <div className={styles.techText}>Git</div>
-                    </div>
-                    <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={mongodbIcon.src} alt='mongodb'/>
-                        <div className={styles.techText}>MongoDB</div>
+                        <img className={styles.techIcon} src={cssIcon.src} alt='css'/>
+                        <div className={styles.techText}>CSS</div>
                     </div>
                     <div className={styles.techIconContainer}>
                         <img className={styles.techIcon} src={tailwindIcon.src} alt='tailwind'/>
                         <div className={styles.techText}>Tailwind</div>
                     </div>
                     <div className={styles.techIconContainer}>
+                        <img className={styles.techIcon} src={nodejsIcon.src} alt='nodejs'/>
+                        <div className={styles.techText}>NodeJS</div>
+                    </div>
+                    <div className={styles.techIconContainer}>
+                        <img className={styles.techIcon} src={mongodbIcon.src} alt='mongodb'/>
+                        <div className={styles.techText}>MongoDB</div>
+                    </div>
+                    <div className={styles.techIconContainer}>
                         <img className={styles.techIcon} src={firebaseIcon.src} alt='firebase'/>
                         <div className={styles.techText}>Firebase</div>
                     </div>
+                    
+                    <div className={styles.techIconContainer}>
+                        <img className={styles.techIcon} src={webpackIcon.src} alt='webpack'/>
+                        <div className={styles.techText}>Webpack</div>
+                    </div>
+                    <div className={styles.techIconContainer}>
+                        <img className={styles.techIcon} src={jestIcon.src} alt='jest'/>
+                        <div className={styles.techText}>Jest</div>
+                    </div>
+                    <div className={styles.techIconContainer}>
+                        <img className={styles.techIcon} src={gitIcon.src} alt='git'/>
+                        <div className={styles.techText}>Git</div>
+                    </div>
+                    
                 </div>
             </div>
             <div className={styles.bottom}>

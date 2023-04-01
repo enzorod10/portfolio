@@ -327,9 +327,10 @@ html,body{
     height: 65px;
     align-items: center;
     padding: 0px 50px;
-    -webkit-box-shadow: 0px 11px 12px -13px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 11px 12px -13px rgba(0,0,0,0.75);
-    box-shadow: 0px 11px 12px -13px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.281);
+    -moz-box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.281);
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.281);
+
     background-color: #007989;
     position: sticky;
     top: 0;
@@ -403,14 +404,27 @@ html,body{
     background-color: #313131;
     border-radius: 5px;
     box-sizing: border-box;
+    position: relative;
     z-index: 1;
     box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.281);
+}
+
+.project::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: #00798941;
+    filter: blur(50px) opacity(0.3);
+    z-index: 2;
 }
 
 .projectGif{
     border-radius: 5px;
     z-index: 2;
-    box-shadow: 1px -2px 4px 0px rgba(0, 0, 0, 0.452);
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.281);
 }
 
 .projectMedia > img{
@@ -870,6 +884,15 @@ html,body{
 @media screen and (min-width: 760px){
     .project{
         padding: 3%;
+    }
+
+    .projectTitle{
+        color: var(--deep-black);
+        background-color:  rgba(255, 255, 255, 0.904);
+        margin: 0 auto;
+        width: 75%;
+        text-align: center;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
     .projectInfo{
