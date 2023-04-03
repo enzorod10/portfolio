@@ -1,3 +1,4 @@
+import autoprefixer from 'autoprefixer';
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import blackLogo from '../../../public/assets/enzo-cs-logo-black.png'
@@ -28,18 +29,19 @@ function PortfolioHeader(props){
     paddingTop: '50px',
     display: 'flex',
     flexDirection: 'column',
-    background: 'rgba(270, 270, 270, 1)',
+    backgroundColor: 'rgba(26, 26, 26)',
+    color: 'white',
     gap: '50px',
-    animation: 'expandList 0.5s'
+    animation: 'expandList 0.5s',
   }
 
   const mobileDirectoryChildStyle = {
     display: 'flex',
     justifyContent: 'center',
-    fontWeight: 800,
+    fontWeight: 500,
     fontSize: 25,
     textDecoration: 'underline',
-    textDecorationColor: 'black',
+    textDecorationColor: 'white',
     textUnderlineOffset: '5px',
     textDecorationThickness: '2px',
   }
@@ -97,8 +99,10 @@ function PortfolioHeader(props){
           <div style={mobileDirectoryChildStyle} onClick={() => router.push('./blog')}>
             BLOG
           </div>
-          <div style={mobileDirectoryChildStyle} onClick={() => router.push('./blog')}>
-            GITHUB
+          <div style={mobileDirectoryChildStyle}>
+            <a style={{color: 'white', textDecorationColor: 'white'}} href='https://github.com/enzorod10'>
+              GITHUB
+            </a>
           </div>
         </div>}
       </div>

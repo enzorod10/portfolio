@@ -3,11 +3,10 @@ import Intro from '../src/components/Intro/Intro';
 import About from '../src/components/About/About';
 import PortfolioHeader from '../src/components/PortfolioHeader/PortfolioHeader';
 import Contact from '../src/components/Contact/Contact';
+import Project0 from '../src/components/Project0/Project0';
 import Project1 from '../src/components/Project1/Project1';
 import Project2 from '../src/components/Project2/Project2';
 import Project3 from '../src/components/Project3/Project3';
-import Project4 from '../src/components/Project4/Project4';
-import Project0 from '../src/components/Project0/Project0';
 
 export async function getStaticProps(){
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/posts`, { mode: 'cors' })
@@ -100,7 +99,6 @@ function App({ windowSize, posts }) {
     project1: false,
     project2: false,
     project3: false,
-    project4: false,
   })
 
   const handleExpandCollapse = (projectName) => {
@@ -138,11 +136,10 @@ function App({ windowSize, posts }) {
       </div>
       <div className='mainSection'>
         <div style={{display: windowSize.width && windowSize.width > 760 ? 'none' : 'block'}} className={'projectSectionHeader'}>Projects</div>
-        {/* <Project0 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/> */}
+        <Project0 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
         <Project1 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
         <Project2 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
         <Project3 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
-        <Project4 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
         <div className='projectOverlay'>
 
         </div>
