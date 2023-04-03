@@ -12,6 +12,7 @@ const windowSize = useWindowSize();
             <meta name="keywords" content="Enzo Rodriguez, NJ, New Jersey, Web Developer, Software Developer, NY, New York, Programmer" />
             <meta name="author" content="Enzo Rodriguez" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <link rel="icon" href="/favicon.png" />
             <title>Portfolio</title>
         </Head>
         <Component {...pageProps} windowSize={windowSize}/>
