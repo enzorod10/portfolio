@@ -5,6 +5,7 @@ import styles from '../../src/components/Blog/Home/Home.module.css';
 import PostsNav from "../../src/components/Blog/PostsNav/PostsNav.js";
 import { DateTime } from "luxon";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export async function getStaticProps(){
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/posts`, { mode: 'cors' })
@@ -51,6 +52,10 @@ function Home({windowSize, posts, tabs}){
     }
 
     return(
+        <>
+        <Head>
+            <title>Blog</title>
+        </Head>
         <div className={styles.homePageContainer}>
             <Header windowSize={windowSize}/>
             <PostsNav loadNewTab={loadNewTab} totalPostsNumber={posts.length} tabs={modifiedTabs}/>
@@ -89,6 +94,7 @@ function Home({windowSize, posts, tabs}){
                 })}
             </ul>
         </div>
+        </>
     )
 }
 

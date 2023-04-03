@@ -7,6 +7,7 @@ import Project0 from '../src/components/Project0/Project0';
 import Project1 from '../src/components/Project1/Project1';
 import Project2 from '../src/components/Project2/Project2';
 import Project3 from '../src/components/Project3/Project3';
+import Head from 'next/head';
 
 export async function getStaticProps(){
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/posts`, { mode: 'cors' })
@@ -128,6 +129,10 @@ function App({ windowSize, posts }) {
   }
 
   return (
+    <>
+    <Head>
+      <title>Portfolio</title>
+    </Head>
     <div className="App">
       <Intro scrollIntoDiv={scrollIntoDiv}/>
       <PortfolioHeader windowSize={windowSize} scrollIntoDiv={scrollIntoDiv} />
@@ -149,6 +154,7 @@ function App({ windowSize, posts }) {
         <Contact />
       </div>
     </div>
+    </>
   );
 }
 

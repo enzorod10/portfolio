@@ -6,6 +6,7 @@ import { DateTime } from 'luxon';
 import Code from '../../../src/components/Blog/Code/code.js'
 import trashIcon from '../../../src/components/Blog/Post/assets/trashIcon.png'
 import { useRouter } from "next/router.js";
+import Head from "next/head.js";
 
 export async function getStaticProps({ params }){
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/post/${params.pid}`, {mode: 'cors'})
@@ -91,6 +92,10 @@ function Post({ windowSize, post, comments }){
     }
 
     return(
+        <>
+        <Head>
+            <title>{post.title}</title>
+        </Head>
         <div className={styles.fullPage}>
             <Header windowSize={windowSize} />
             <div className={styles.postPage}>
@@ -136,6 +141,7 @@ function Post({ windowSize, post, comments }){
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
