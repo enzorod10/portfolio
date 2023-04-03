@@ -59,17 +59,20 @@ function Header({ windowSize }){
         background: 'rgba(270, 270, 270, 1)',
         gap: '50px',
         animation: 'expandList 0.5s',
-        zIndex: '2'
+        zIndex: '2',
+        overflow: 'auto',
+        color: 'white',
+        backgroundColor: 'rgba(26, 26, 26)',
     }
     
       const mobileDirectoryChildStyle = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontWeight: 800,
+        fontWeight: 500,
         fontSize: 25,
         textDecoration: 'underline',
-        textDecorationColor: 'black',
+        textDecorationColor: 'white',
         textUnderlineOffset: '5px',
         textDecorationThickness: '2px',
       }
