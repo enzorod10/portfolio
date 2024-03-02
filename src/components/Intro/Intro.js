@@ -4,7 +4,7 @@ import githubIcon from '../../../public/assets/githubIcon.png'
 import linkedinIcon from '../../../public/assets/linkedinIcon.png'
 import aboutIcon from '../../../public/assets/aboutIcon.png'
 import blogIcon from '../../../public/assets/blogIcon.png'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router' 
 
 function Intro(props){
 
