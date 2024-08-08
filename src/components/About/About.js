@@ -134,7 +134,7 @@ function About({ posts }){
                     modifiedPosts && modifiedPosts.map(post => {
                         return(
                             <div onClick={() => router.push(`blog/post/${post._id}`)}key={uid()}className={styles.blog}>
-                                <img className={styles.blogImage} src={post.imageUrl} alt={post.title}/>
+                                <img className={styles.blogImage} src={`assets/blogImages/${post.imageUrl}`} alt={post.title}/>
                                 <div className={styles.blogInfo}>
                                     <div className={styles.blogName}>
                                         {post.title}

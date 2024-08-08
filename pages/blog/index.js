@@ -63,7 +63,7 @@ function Home({windowSize, posts, tabs}){
                 {displayedPosts.map(post => {
                     return displayedPosts.indexOf(post) === 0 ?
                         <li onClick={() => router.push(`/blog/post/${post._id}`)} key={uid()} className={styles.mainPost}>
-                            <img className={styles.mainPostImage} src={post.imageUrl} alt='Blog post'/>
+                            <img className={styles.mainPostImage} src={`assets/blogImages/${post.imageUrl}`} alt='Blog post'/>
                             <div className={styles.mainPostContent}>
                                 <div className={styles.mainPostTitle}>
                                     {post.title}
@@ -78,7 +78,7 @@ function Home({windowSize, posts, tabs}){
                         </li>
                     :
                     <li onClick={() => router.push(`/blog/post/${post._id}`)} key={uid()} className={styles.otherPost}>
-                        <img className={styles.otherPostImage} src={post.imageUrl} alt='Blog post'/> 
+                        <img className={styles.otherPostImage} src={`assets/blogImages/${post.imageUrl}`} alt='Blog post'/> 
                         <div className={styles.otherPostContent}>
                             <div className={styles.otherPostTitle}>
                                 {post.title}
