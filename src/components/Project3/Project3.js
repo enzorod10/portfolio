@@ -58,7 +58,7 @@ function Project3(props){
               </div>}
             <div style={{marginLeft: '-20px'}} className='projectInfo'>
               <div onClick={projectIntermission} style={{height: props.windowSize.width && props.windowSize.width <= 760 && !props.expandedProject.project3 && '35px' }} className='projectTitle'>
-                CV/Resume Builder
+                Kick Realm
                 {props.windowSize.width && props.windowSize.width <= 760 && (!props.expandedProject.project3 ? <img style={{position: 'absolute', right: '10%'}} src={expandIcon.src} alt='expand' /> : <img style={{position: 'absolute', right: '10%'}} src={collapseIcon.src} alt='collapse' />)}
               </div>
               {((props.windowSize.width && props.windowSize.width <= 760 && props.expandedProject.project3) || (props.windowSize.width && props.windowSize.width > 760)) &&
@@ -68,8 +68,7 @@ function Project3(props){
                   <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href='https://github.com/enzorod10/cv-project'> <img style={{width: '16px'}} src={githubRepoLink.src} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href='https://github.com/enzorod10/cv-project'>Repo</a></div>
                 </div>
                 <div className='projectDescription'>
-                  <p>Conveniently create a CV or resume by tracking changes to a beautifully formatted document in real-time. Users can list their skills, contact information, work experience, education and can choose to include a photo.</p>
-                  <p>When complete, one can download a pdf of their document with one button. </p>
+                  <p>A platform for Kick streamers and viewers, where users can invest in streamers using virtual currency, track real-time analytics, and view upcoming stream schedules. Streamers can apply for affiliation, and users can apply for admin or mod roles, fostering a vibrant and interactive community.</p>
                 </div>
                 {props.windowSize.width && props.windowSize.width <= 760 && 
                 <div className='projectGif'>
