@@ -64,8 +64,8 @@ function Project3(props){
               {((props.windowSize.width && props.windowSize.width <= 760 && props.expandedProject.project3) || (props.windowSize.width && props.windowSize.width > 760)) &&
               <div className='aboutProject'>
                 <div className='projectLinks'>
-                  <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href='https://enzorod10.github.io/cv-project/'> <img style={{width: '16px'}} src={linkIcon.src} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href='https://enzorod10.github.io/cv-project/'>Live</a></div>
-                  <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href='https://github.com/enzorod10/cv-project'> <img style={{width: '16px'}} src={githubRepoLink.src} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href='https://github.com/enzorod10/cv-project'>Repo</a></div>
+                  <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href='https://kickrealm.com'> <img style={{width: '16px'}} src={linkIcon.src} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href='https://kickrealm.com/'>Live</a></div>
+                  <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href='https://github.com/enzorod10/kickrealm'> <img style={{width: '16px'}} src={githubRepoLink.src} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href='https://github.com/enzorod10/kickrealm'>Repo</a></div>
                 </div>
                 <div className='projectDescription'>
                   <p>A platform for Kick streamers and viewers, where users can invest in streamers using virtual currency, track real-time analytics, and view upcoming stream schedules. Streamers can apply for affiliation, and users can apply for admin or mod roles, fostering a vibrant and interactive community.</p>

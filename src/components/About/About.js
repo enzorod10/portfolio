@@ -1,19 +1,15 @@
 import styles from './About.module.css';
 import sampleImage from '../../../public/assets/sampleImage.png';
-import htmlIcon from '../../../public/assets/stackImages/htmlIcon.svg';
-import cssIcon from '../../../public/assets/stackImages/cssIcon.svg';
-import javascriptIcon from '../../../public/assets/stackImages/javascriptIcon.svg';
-import reactIcon from '../../../public/assets/stackImages/reactIcon.svg';
 import nodejsIcon from '../../../public/assets/stackImages/nodejsIcon.svg';
 import mongodbIcon from '../../../public/assets/stackImages/mongodbIcon.svg';
 import gitIcon from '../../../public/assets/stackImages/gitIcon.svg';
-import webpackIcon from '../../../public/assets/stackImages/webpackIcon.svg';
 import jestIcon from '../../../public/assets/stackImages/jestIcon.svg';
-import firebaseIcon from '../../../public/assets/stackImages/firebaseIcon.svg';
 import tailwindIcon from '../../../public/assets/stackImages/tailwindIcon.svg';
 import nextjsIcon from '../../../public/assets/stackImages/nextjsIcon.svg';
 import reduxIcon from '../../../public/assets/stackImages/reduxIcon.svg';
+import blenderIcon from '../../../public/assets/stackImages/blenderIcon.svg';
 import typescriptIcon from '../../../public/assets/stackImages/typescriptIcon.svg';
+import psqlIcon from '../../../public/assets/stackImages/psqlIcon.svg';
 import loadingIcon from '../../../public/assets/loadingIcon.gif';
 import { uid } from "uid";
 import { DateTime } from 'luxon'; 
@@ -75,16 +71,12 @@ function About({ posts }){
                         <div className={styles.techText}>NextJs</div>
                     </div>
                     <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={reactIcon.src} alt='react'/>
-                        <div className={styles.techText}>React</div>
+                        <img className={styles.techIcon} src={psqlIcon.src} alt='postgreSQL'/>
+                        <div className={styles.techText}>PostgreSQL</div>
                     </div>
                     <div className={styles.techIconContainer}>
                         <img className={styles.techIcon} src={reduxIcon.src} alt='redux'/>
                         <div className={styles.techText}>Redux</div>
-                    </div>
-                    <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={cssIcon.src} alt='css'/>
-                        <div className={styles.techText}>CSS</div>
                     </div>
                     <div className={styles.techIconContainer}>
                         <img className={styles.techIcon} src={tailwindIcon.src} alt='tailwind'/>
@@ -95,17 +87,12 @@ function About({ posts }){
                         <div className={styles.techText}>NodeJS</div>
                     </div>
                     <div className={styles.techIconContainer}>
+                        <img className={styles.techIcon} src={blenderIcon.src} alt='nextjs'/>
+                        <div className={styles.techText}>Blender</div>
+                    </div>
+                    <div className={styles.techIconContainer}>
                         <img className={styles.techIcon} src={mongodbIcon.src} alt='mongodb'/>
                         <div className={styles.techText}>MongoDB</div>
-                    </div>
-                    <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={firebaseIcon.src} alt='firebase'/>
-                        <div className={styles.techText}>Firebase</div>
-                    </div>
-                    
-                    <div className={styles.techIconContainer}>
-                        <img className={styles.techIcon} src={webpackIcon.src} alt='webpack'/>
-                        <div className={styles.techText}>Webpack</div>
                     </div>
                     <div className={styles.techIconContainer}>
                         <img className={styles.techIcon} src={jestIcon.src} alt='jest'/>
