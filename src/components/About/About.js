@@ -10,32 +10,8 @@ import reduxIcon from '../../../public/assets/stackImages/reduxIcon.svg';
 import blenderIcon from '../../../public/assets/stackImages/blenderIcon.svg';
 import typescriptIcon from '../../../public/assets/stackImages/typescriptIcon.svg';
 import psqlIcon from '../../../public/assets/stackImages/psqlIcon.svg';
-// import loadingIcon from '../../../public/assets/loadingIcon.gif';
-// import { uid } from "uid";
-// import { DateTime } from 'luxon'; 
-// import { useEffect, useState } from 'react';
-// import { useRouter } from 'next/router';
 
-function About({ posts }){
-    // const [ modifiedPosts, setModifiedPosts ] = useState(null);
-    // const [ loadingPosts, setLoadingPosts ] = useState(true);
-    // const router = useRouter();
-
-    // useEffect(() => {
-    //     if (posts.length > 0){
-    //         // Modifying date
-    //         let tempPosts = posts.map(post => {
-    //             const modifiedPost = { ...post}
-    //             let tempDate = new Date(post.timestamp)
-    //             modifiedPost.modifiedDate = DateTime.fromJSDate(tempDate).toLocaleString(DateTime.DATE_FULL)
-    //             return modifiedPost
-    //         })
-    //         setLoadingPosts(false)
-    //         setModifiedPosts(tempPosts)
-    //     }
-        
-    // }, [ posts ])
-
+function About(){
     return(
         <div className={styles.fullPage}>
             <div className={styles.top}>
@@ -51,9 +27,6 @@ function About({ posts }){
                         in the frontend and backend. I enjoy bringing ideas to life in the browser 
                         through code.
                     </div>
-                    {/* <div className={styles.infoCloser}>
-                        Full bio <span style={{textDecoration: 'underline', cursor: 'pointer', textDecorationColor: '#007989'}} onClick={() => router.push('/blog/post/634fb4cddcbe82f7bf2fa860')}>here</span>
-                    </div> */}
                 </div>
             </div>
             <div className={styles.middle}>
@@ -101,40 +74,8 @@ function About({ posts }){
                         <img className={styles.techIcon} src={gitIcon.src} alt='git'/>
                         <div className={styles.techText}>Git</div>
                     </div>
-                    
                 </div>
             </div>
-            {/* <div className={styles.bottom}>
-                <div className={styles.recentBlogPostsContainer}>
-                    <div className={styles.blogSectionTitle}>
-                        Recent Blog Posts
-                    </div>
-                    {loadingPosts ? <div className={styles.blog}>
-                        <img style={{height: '20px', width: '20px'}}src={loadingIcon.src} alt={'loadingIcon'}/>
-                        <div className={styles.blogInfo}>
-                            <div>
-                                Loading Posts...
-                            </div>
-                        </div>
-                    </div> :
-                    modifiedPosts && modifiedPosts.map(post => {
-                        return(
-                            <div onClick={() => router.push(`blog/post/${post._id}`)}key={uid()}className={styles.blog}>
-                                <img className={styles.blogImage} src={`assets/blogImages/${post.imageUrl}`} alt={post.title}/>
-                                <div className={styles.blogInfo}>
-                                    <div className={styles.blogName}>
-                                        {post.title}
-                                    </div>
-                                    <div className={styles.blogDate}>
-                                        {post.modifiedDate}
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    })}
-                    
-                </div>
-            </div> */}
         </div>
     )
 }

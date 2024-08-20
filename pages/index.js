@@ -9,47 +9,7 @@ import Project2 from '../src/components/Project2/Project2';
 import Project3 from '../src/components/Project3/Project3';
 import Head from 'next/head';
 
-// export async function getStaticProps(){
-//   const res = await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/posts`, { mode: 'cors' })
-//   const posts =  await res.json()
-//   posts.reverse()
-//   return{
-//       props: {
-//           posts
-//       }
-//   }
-// }
-
-// removed posts props from app, since blog isn't a feature at the moment
-
 function App({ windowSize }) {
-  const [viewMode, setViewMode] = useState({
-    project0: {
-      computer: false,
-      tablet: false,
-      smartphone: true
-    },
-    project1: {
-      computer: false,
-      tablet: true,
-      smartphone: false
-    },
-    project2: {
-      computer: false,
-      tablet: false,
-      smartphone: true
-    },
-    project3: {
-      computer: false,
-      tablet: false,
-      smartphone: true
-    },
-    project4: {
-      computer: true,
-      tablet: false,
-      smartphone: false
-    }
-  })
 
     // Depending on scroll location, header will hide or show
     useEffect(() => {
