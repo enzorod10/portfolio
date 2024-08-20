@@ -38,57 +38,31 @@ function Project1(props){
   }, [props.viewMode.project1])
 
     return(
-        <div className='projectContainer'>
-          <div className='project'>
-          {props.windowSize.width && props.windowSize.width > 760 && 
-              <div className='projectGif'>
-                <div className='selectProjectView'>
-                  <div className='viewIcon' style={{backgroundColor: props.viewMode.project1.computer ? 'white' : 'transparent'}} onClick={() => props.selectDifferentView('project1', 'computer')}>
-                    <img src={props.viewMode.project1.computer ? monitorBlackIcon.src : monitorIcon.src} alt='Monitor Icon'/>
-                  </div>
-                  <div className='viewIcon' style={{backgroundColor: props.viewMode.project1.tablet ? 'white' : 'transparent'}} onClick={() => props.selectDifferentView('project1', 'tablet')}>
-                    <img src={props.viewMode.project1.tablet ? tabletBlackIcon.src : tabletIcon.src} alt='Tablet Icon'/>
-                  </div>
-                  <div className='viewIcon' style={{backgroundColor: props.viewMode.project1.smartphone ? 'white' : 'transparent'}} onClick={() => props.selectDifferentView('project1', 'smartphone')}>
-                    <img src={props.viewMode.project1.smartphone ? smartphoneBlackIcon.src : smartphoneIcon.src} alt='Smartphone Icon'/>
-                  </div>
-                </div>
-                <div className='projectMedia'>
-                  <img src={mediaShown.src} alt='gif of project' />
-                </div>
-              </div>}
-            <div style={{marginLeft: '-20px'}} className='projectInfo'>
-              <div onClick={projectIntermission} style={{height: props.windowSize.width && props.windowSize.width <= 760 && !props.expandedProject.project1 && '35px' }} className='projectTitle'>
+        <div className=''>
+          <div className='flex justify-center items-center sm:p-4 md:p-16'>
+          {props.windowSize.width && props.windowSize.width > 640 && 
+            <div className='w-96'>
+              <img src={mediaShown.src} alt='gif of project' />
+            </div>}
+            <div className='sm:w-[500px] w-full h-full m-0 sm:-ml-8'>
+              <div onClick={projectIntermission} style={{height: props.windowSize.width && props.windowSize.width <= 640 && !props.expandedProject.project1 && '35px' }} className='projectTitle'>
                 Solteract
-                {props.windowSize.width && props.windowSize.width <= 760 && (!props.expandedProject.project1 ? <img style={{position: 'absolute', right: '10%'}} src={expandIcon.src} alt='expand' /> : <img style={{position: 'absolute', right: '10%'}} src={collapseIcon.src} alt='collapse' />)}
+                {props.windowSize.width && props.windowSize.width <= 640 && (!props.expandedProject.project1 ? <img style={{position: 'absolute', right: '10%'}} src={expandIcon.src} alt='expand' /> : <img style={{position: 'absolute', right: '10%'}} src={collapseIcon.src} alt='collapse' />)}
               </div>
-              {((props.windowSize.width && props.windowSize.width <= 760 && props.expandedProject.project1) || (props.windowSize.width && props.windowSize.width > 760)) &&
+              {((props.windowSize.width && props.windowSize.width <= 640 && props.expandedProject.project1) || (props.windowSize.width && props.windowSize.width > 640)) &&
               <div className='aboutProject'>
                 <div className='projectLinks'>
                   <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href='https://soterak-1f634.web.app'> <img style={{width: '16px'}} src={linkIcon.src} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href='https://soterak-1f634.web.app'>Live</a></div>
                   <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href='https://www.github.com/enzorod10/solteract'> <img style={{width: '16px'}} src={githubRepoLink.src} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href='https://www.github.com/enzorod10/solteract'>Repo</a></div>
                 </div>
-                <div className='projectDescription'>
+                <div className=''>
                   <p>A social media platform that gives users the ability to express themselves in their own personal space. Inspired by twitter. </p>
                   <p>Users have their own timelines {'&'} feeds, are able to communicate with each other through transmissions (tweets) which can be text and/or media. Users can customize their profile name, username, header, {'&'} profile picture. </p>
                 </div>
-                {props.windowSize.width && props.windowSize.width <= 760 && 
-                <div className='projectGif'>
-                  <div className='selectProjectView'>
-                    <div className='viewIcon' style={{backgroundColor: props.viewMode.project1.computer ? 'white' : 'transparent'}} onClick={() => props.selectDifferentView('project1', 'computer')}>
-                      <img src={props.viewMode.project1.computer ? monitorBlackIcon.src : monitorIcon.src} alt='Monitor Icon'/>
-                    </div>
-                    <div className='viewIcon' style={{backgroundColor: props.viewMode.project1.tablet ? 'white' : 'transparent'}} onClick={() => props.selectDifferentView('project1', 'tablet')}>
-                      <img src={props.viewMode.project1.tablet ? tabletBlackIcon.src : tabletIcon.src} alt='Tablet Icon'/>
-                    </div>
-                    <div className='viewIcon' style={{backgroundColor: props.viewMode.project1.smartphone ? 'white' : 'transparent'}} onClick={() => props.selectDifferentView('project1', 'smartphone')}>
-                      <img src={props.viewMode.project1.smartphone ? smartphoneBlackIcon.src : smartphoneIcon.src} alt='Smartphone Icon'/>
-                    </div>
-                  </div>
-                  <div className='projectMedia'>
+                {props.windowSize.width && props.windowSize.width <= 640 && 
+                  <div className=''>
                     <img src={mediaShown.src} alt='gif of project' />
-                  </div>
-                </div>}
+                  </div>}
                 <div className='technologyUsed'>
                     <div className='techIconContainer'>
                         <img className='techIcon' src={htmlIcon.src} alt='html'/>

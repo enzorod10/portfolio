@@ -1,11 +1,8 @@
-import autoprefixer from 'autoprefixer';
-import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import blackLogo from '../../../public/assets/enzo-cs-logo-black.png'
 import menuIcon from '../../../public/assets/menuIcon.png'
 
 function PortfolioHeader(props){
-  const router = useRouter();
   const [menuDisplay, setMenuDisplay] = useState(false);
 
   useEffect(() => {
@@ -80,9 +77,6 @@ function PortfolioHeader(props){
             <div onClick={() => props.scrollIntoDiv('contact')}>
               CONTACT
             </div>
-            <div onClick={() => router.push('./blog')}>
-              BLOG
-            </div>
           </div> :
           <img onClick={toggleMenuDisplay} src={menuIcon.src} alt='Menu icon'/>
         }
@@ -95,9 +89,6 @@ function PortfolioHeader(props){
           </div>
           <div style={mobileDirectoryChildStyle} onClick={() => handleMobileMenuClick('contact')}>
             CONTACT
-          </div>
-          <div style={mobileDirectoryChildStyle} onClick={() => router.push('./blog')}>
-            BLOG
           </div>
           <div style={mobileDirectoryChildStyle}>
             <a style={{color: 'white', textDecorationColor: 'white'}} href='https://github.com/enzorod10'>

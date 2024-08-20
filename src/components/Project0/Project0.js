@@ -37,45 +37,28 @@ function Project0(props){
   }, [props.viewMode.project0])
 
     return(
-        <div  className='projectContainer'>
-          <div className='project'>
-          <div style={{marginRight: '-20px'}} className='projectInfo'>
-              <div onClick={projectIntermission} style={{height: props.windowSize.width && props.windowSize.width <= 760 && !props.expandedProject.project0 && '35px' }} className='projectTitle'>
+        <div className=''>
+          <div className='flex justify-center items-center sm:p-4 md:p-16'>
+            <div style={{marginRight: '-20px'}} className='projectInfo'>
+              <div onClick={projectIntermission} style={{height: props.windowSize.width && props.windowSize.width <= 640 && !props.expandedProject.project0 && '35px' }} className='projectTitle'>
                 First Pick Fit
-                {props.windowSize.width && props.windowSize.width <= 760 && (!props.expandedProject.project0 ? <img style={{position: 'absolute', right: '10%'}} src={expandIcon.src} alt='expand' /> : <img style={{position: 'absolute', right: '10%'}} src={collapseIcon.src} alt='collapse' />)}
+                {props.windowSize.width && props.windowSize.width <= 640 && (!props.expandedProject.project0 ? <img style={{position: 'absolute', right: '10%'}} src={expandIcon.src} alt='expand' /> : <img style={{position: 'absolute', right: '10%'}} src={collapseIcon.src} alt='collapse' />)}
               </div>
-              {((props.windowSize.width && props.windowSize.width <= 760 && props.expandedProject.project0) || (props.windowSize.width && props.windowSize.width > 760)) &&
+              {((props.windowSize.width && props.windowSize.width <= 640 && props.expandedProject.project0) || (props.windowSize.width && props.windowSize.width > 640)) &&
               <div className='aboutProject'>
                 <div className='projectLinks'>
                   <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href='https://first-pick-fit.vercel.app/'> <img style={{width: '16px'}} src={linkIcon.src} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href='https://first-pick-fit.vercel.app/'>Live</a></div>
                   <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href='https://github.com/enzorod10/first-pick-fit'> <img style={{width: '16px'}} src={githubRepoLink.src} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href='https://github.com/enzorod10/first-pick-fit'>Repo</a></div>
                 </div>
-                <div className='projectDescription'>
+                <div className=''>
                   <p>
-                  A fitness tracker with drag-and-drop functionality for easy workout creation, and
-                   includes a database implemented with Firebase for user authentication and 
-                   data storage. 
+                  A fitness tracker with drag-and-drop functionality for easy workout creation & tracking.
                   </p>
-                  <p>Users can create custom workouts, add exercises, and select 
-                   pre-made programs, which can be scheduled on a calendar. Its intuitive user
-                    interface makes it easy for users to quickly create and schedule workouts and programs. </p>
+                  <p>Features an intuitive user interface to quickly create and schedule workouts, programs and exercises. </p>
                 </div>
-                {props.windowSize.width && props.windowSize.width <= 760 && 
-                <div className='projectGif'>
-                  <div className='selectProjectView'>
-                    <div className='viewIcon' style={{backgroundColor: props.viewMode.project0.computer ? 'white' : 'transparent'}} onClick={() => props.selectDifferentView('project0', 'computer')}>
-                      <img src={props.viewMode.project0.computer ? monitorBlackIcon.src : monitorIcon.src} alt='Monitor Icon'/>
-                    </div>
-                    <div className='viewIcon' style={{backgroundColor: props.viewMode.project0.tablet ? 'white' : 'transparent'}} onClick={() => props.selectDifferentView('project0', 'tablet')}>
-                      <img src={props.viewMode.project0.tablet ? tabletBlackIcon.src : tabletIcon.src} alt='Tablet Icon'/>
-                    </div>
-                    <div className='viewIcon' style={{backgroundColor: props.viewMode.project0.smartphone ? 'white' : 'transparent'}} onClick={() => props.selectDifferentView('project0', 'smartphone')}>
-                      <img src={props.viewMode.project0.smartphone ? smartphoneBlackIcon.src : smartphoneIcon.src} alt='Smartphone Icon'/>
-                    </div>
-                  </div>
-                  <div className='projectMedia'>
+                {props.windowSize.width && props.windowSize.width <= 640 && 
+                <div className=''>
                     <img src={mediaShown.src} alt='gif of project' />
-                  </div>
                 </div>}
                 <div className='technologyUsed'>
                 <div className='techIconContainer'>
@@ -97,24 +80,10 @@ function Project0(props){
                 </div>
               </div>}
             </div>
-          {props.windowSize.width && props.windowSize.width > 760 && 
-              <div className='projectGif'>
-                <div className='selectProjectView'>
-                  <div className='viewIcon' style={{backgroundColor: props.viewMode.project0.computer ? 'white' : 'transparent'}} onClick={() => props.selectDifferentView('project0', 'computer')}>
-                    <img src={props.viewMode.project0.computer ? monitorBlackIcon.src : monitorIcon.src} alt='Monitor Icon'/>
-                  </div>
-                  <div className='viewIcon' style={{backgroundColor: props.viewMode.project0.tablet ? 'white' : 'transparent'}} onClick={() => props.selectDifferentView('project0', 'tablet')}>
-                    <img src={props.viewMode.project0.tablet ? tabletBlackIcon.src : tabletIcon.src} alt='Tablet Icon'/>
-                  </div>
-                  <div className='viewIcon' style={{backgroundColor: props.viewMode.project0.smartphone ? 'white' : 'transparent'}} onClick={() => props.selectDifferentView('project0', 'smartphone')}>
-                    <img src={props.viewMode.project0.smartphone ? smartphoneBlackIcon.src : smartphoneIcon.src} alt='Smartphone Icon'/>
-                  </div>
-                </div>
-                <div className='projectMedia'>
-                  <img src={mediaShown.src} alt='gif of project' />
-                </div>
-              </div>}
-            
+          {props.windowSize.width && props.windowSize.width > 640 && 
+            <div className='w-96'>
+              <img src={mediaShown.src} alt='gif of project' />
+            </div>}
           </div>
         </div>
     )

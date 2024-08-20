@@ -1,10 +1,11 @@
-import folderIcon from '../../../public/assets/folderIcon.png'
-import mailIcon from '../../../public/assets/mailIcon.png'
-import githubIcon from '../../../public/assets/githubIcon.png'
-import linkedinIcon from '../../../public/assets/linkedinIcon.png'
-import aboutIcon from '../../../public/assets/aboutIcon.png'
-import blogIcon from '../../../public/assets/blogIcon.png'
-import { useRouter } from 'next/router' 
+import folderIcon from '../../../public/assets/folderIcon.png';
+import mailIcon from '../../../public/assets/mailIcon.png';
+import githubIcon from '../../../public/assets/githubIcon.png';
+import linkedinIcon from '../../../public/assets/linkedinIcon.png';
+import aboutIcon from '../../../public/assets/aboutIcon.png';
+import blogIcon from '../../../public/assets/blogIcon.png';
+import xIcon from '../../../public/assets/xIcon.png';
+import { useRouter } from 'next/router';
 
 function Intro(props){
 
@@ -62,9 +63,11 @@ function Intro(props){
                   </div>
                 <div className='link'>
                   <div className='hanger'></div>
-                    <div className='icon' onClick={() => router.push('/blog')}>
-                      <img src={blogIcon.src} alt='Blog icon' />
-                    </div>
+                    <a href={'https://x.com/enzodevtech'}>
+                      <div className='icon'>
+                        <img src={xIcon.src} alt='X(Twitter) icon' />
+                      </div>
+                    </a>
                 </div>
               </div>
             </span>

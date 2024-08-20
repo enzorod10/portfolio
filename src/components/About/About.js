@@ -10,32 +10,31 @@ import reduxIcon from '../../../public/assets/stackImages/reduxIcon.svg';
 import blenderIcon from '../../../public/assets/stackImages/blenderIcon.svg';
 import typescriptIcon from '../../../public/assets/stackImages/typescriptIcon.svg';
 import psqlIcon from '../../../public/assets/stackImages/psqlIcon.svg';
-import loadingIcon from '../../../public/assets/loadingIcon.gif';
-import { uid } from "uid";
-import { DateTime } from 'luxon'; 
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+// import loadingIcon from '../../../public/assets/loadingIcon.gif';
+// import { uid } from "uid";
+// import { DateTime } from 'luxon'; 
+// import { useEffect, useState } from 'react';
+// import { useRouter } from 'next/router';
 
 function About({ posts }){
-    const [ modifiedPosts, setModifiedPosts ] = useState(null);
-    const [ loadingPosts, setLoadingPosts ] = useState(true);
-    const router = useRouter();
+    // const [ modifiedPosts, setModifiedPosts ] = useState(null);
+    // const [ loadingPosts, setLoadingPosts ] = useState(true);
+    // const router = useRouter();
 
-    useEffect(() => {
-        if (posts.length > 0){
-            // Modifying date
-            let tempPosts = posts.map(post => {
-                const modifiedPost = { ...post}
-                let tempDate = new Date(post.timestamp)
-                modifiedPost.modifiedDate = DateTime.fromJSDate(tempDate).toLocaleString(DateTime.DATE_FULL)
-                return modifiedPost
-            })
-            setLoadingPosts(false)
-            setModifiedPosts(tempPosts)
-        }
+    // useEffect(() => {
+    //     if (posts.length > 0){
+    //         // Modifying date
+    //         let tempPosts = posts.map(post => {
+    //             const modifiedPost = { ...post}
+    //             let tempDate = new Date(post.timestamp)
+    //             modifiedPost.modifiedDate = DateTime.fromJSDate(tempDate).toLocaleString(DateTime.DATE_FULL)
+    //             return modifiedPost
+    //         })
+    //         setLoadingPosts(false)
+    //         setModifiedPosts(tempPosts)
+    //     }
         
-    }, [ posts ])
-
+    // }, [ posts ])
 
     return(
         <div className={styles.fullPage}>
@@ -48,13 +47,13 @@ function About({ posts }){
                         Hello there
                     </div>
                     <div className={styles.infoBody}>
-                        I'm Enzo Rodriguez, a New Jersey-based frontend developer with experience
-                        in the backend. I enjoy bringing ideas to life in the browser 
+                        I'm Enzo Rodriguez, a New Jersey-based developer with experience
+                        in the frontend and backend. I enjoy bringing ideas to life in the browser 
                         through code.
                     </div>
-                    <div className={styles.infoCloser}>
+                    {/* <div className={styles.infoCloser}>
                         Full bio <span style={{textDecoration: 'underline', cursor: 'pointer', textDecorationColor: '#007989'}} onClick={() => router.push('/blog/post/634fb4cddcbe82f7bf2fa860')}>here</span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className={styles.middle}>
@@ -105,7 +104,7 @@ function About({ posts }){
                     
                 </div>
             </div>
-            <div className={styles.bottom}>
+            {/* <div className={styles.bottom}>
                 <div className={styles.recentBlogPostsContainer}>
                     <div className={styles.blogSectionTitle}>
                         Recent Blog Posts
@@ -135,7 +134,7 @@ function About({ posts }){
                     })}
                     
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

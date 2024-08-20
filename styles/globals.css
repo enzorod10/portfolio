@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *{
     padding: 0;
     margin: 0;
@@ -19,6 +23,7 @@
 html,body{
     position: relative;
     overflow-x: clip;
+    background-color: rgb(26, 26, 26);
 }
 
 /* --------- Intro Section --------- */
@@ -377,15 +382,6 @@ html,body{
     text-decoration-thickness: 2px; 
 }
 
-.projectContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1% 1.5%;
-    overflow-x: hidden;
-    background-color: #1a1a1a;
-}
-
 .projectSectionHeader{
     color: rgba(255, 255, 255, 0.904);
     margin: 0 auto;
@@ -409,37 +405,11 @@ html,body{
     box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.281);
 }
 
-.project::before{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background-color: #00798941;
-    filter: blur(50px) opacity(0.3);
-    z-index: 2;
-}
-
-.projectGif{
-    border-radius: 5px;
-    z-index: 2;
-    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.281);
-}
-
 .projectMedia > img{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     width: 100%;
     transition: all 0.5s ease !important;
-
-}
-
-.selectProjectView{
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    background-color: rgba(77, 105, 131, 0.397);
 }
 
 .viewIcon{
@@ -453,19 +423,6 @@ html,body{
 
 .viewIcon > img{
     width: 24px;
-}
-
-.selectProjectView > div:nth-child(2),
-.selectProjectView > div:nth-child(3){
-    border-right: 1px rgb(255, 255, 255) solid;
-}
-
-.selectProjectView > div:nth-child(1){
-    border-top-right-radius: 5px;
-}
-
-.selectProjectView > div:nth-child(3){
-    border-top-left-radius: 5px;
 }
 
 .projectInfo{
@@ -499,16 +456,6 @@ html,body{
     display: flex;
     justify-content: space-around;
     border-bottom: 1px black solid;
-}
-
-.projectDescription{
-    height: 65%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    font-size: 17px;
-    color: var(--deep-black);
-    user-select: text;
 }
 
 .technologyUsed{
@@ -620,7 +567,7 @@ html,body{
     }
 }
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 640px){
     @keyframes linkAppear1 {
         0%{
             opacity: 0;
@@ -825,17 +772,6 @@ html,body{
         border-radius: 5px;
     }
 
-    .selectProjectView{
-        background-color: var(--deep-black);
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-    }
-
-    .projectGif{
-        box-shadow: 0px -1px 3px 0px rgba(0, 0, 0, 0.452);
-        width: 100%;
-    }
-
     .projectMedia{
         display: flex;
     }
@@ -862,12 +798,6 @@ html,body{
         height: 35px;
     }
 
-    .projectDescription{
-        font-size: 14px;
-        justify-content: flex-start;
-        gap: 10px;
-    }
-
     .technologyUsed{
         height: 60px;
     }
@@ -881,7 +811,7 @@ html,body{
     }
 }
 
-@media screen and (min-width: 760px){
+@media screen and (min-width: 640px){
     .project{
         padding: 3%;
     }
@@ -900,11 +830,6 @@ html,body{
     }
 
     .projectLinks{
-        padding: 10px 0px;
-    }
-
-    .projectDescription{
-        gap: 5px;
         padding: 10px 0px;
     }
 

@@ -9,18 +9,20 @@ import Project2 from '../src/components/Project2/Project2';
 import Project3 from '../src/components/Project3/Project3';
 import Head from 'next/head';
 
-export async function getStaticProps(){
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/posts`, { mode: 'cors' })
-  const posts =  await res.json()
-  posts.reverse()
-  return{
-      props: {
-          posts
-      }
-  }
-}
+// export async function getStaticProps(){
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/posts`, { mode: 'cors' })
+//   const posts =  await res.json()
+//   posts.reverse()
+//   return{
+//       props: {
+//           posts
+//       }
+//   }
+// }
 
-function App({ windowSize, posts }) {
+// removed posts props from app, since blog isn't a feature at the moment
+
+function App({ windowSize }) {
   const [viewMode, setViewMode] = useState({
     project0: {
       computer: false,
@@ -50,7 +52,6 @@ function App({ windowSize, posts }) {
   })
 
     // Depending on scroll location, header will hide or show
-
     useEffect(() => {
       const location = document.querySelector('.aboutSection').getBoundingClientRect().top
       if (location < 0){
@@ -137,18 +138,18 @@ function App({ windowSize, posts }) {
       <Intro scrollIntoDiv={scrollIntoDiv}/>
       <PortfolioHeader windowSize={windowSize} scrollIntoDiv={scrollIntoDiv} />
       <div className='aboutSection'>
-        <About posts={posts.slice(0, windowSize.width && windowSize.width > 810 ? 3 : 2)}/>
+        {/* about section with blog posts removed */}
+        {/* <About posts={posts.slice(0, windowSize.width && windowSize.width > 810 ? 3 : 2)}/> */}
+        <About/>
       </div>
       <div className='mainSection'>
-        <div style={{display: windowSize.width && windowSize.width > 760 ? 'none' : 'block'}} className={'projectSectionHeader'}>Projects</div>
+        <div style={{display: windowSize.width && windowSize.width > 640 ? 'none' : 'block'}} className={'projectSectionHeader'}>Projects</div>
         <Project0 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
         <Project1 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
         <Project2 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
         <Project3 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
         <div className='projectOverlay'>
-
         </div>
-
       </div>
       <div className='contactSection'>
         <Contact />
