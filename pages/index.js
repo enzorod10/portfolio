@@ -10,7 +10,6 @@ import Project3 from '../src/components/Project3/Project3';
 import Head from 'next/head';
 
 function App({ windowSize }) {
-
     // Depending on scroll location, header will hide or show
     useEffect(() => {
       const location = document.querySelector('.aboutSection').getBoundingClientRect().top
@@ -33,7 +32,6 @@ function App({ windowSize }) {
           }
         }
       } 
-      
     }
 
     const scrollIntoDiv = destination => {
@@ -77,18 +75,6 @@ function App({ windowSize }) {
     setExpandedProject(tempExpandedProject)
   }
 
-  const selectDifferentView = (project, selectedDevice) => {
-      let tempViewMode = JSON.parse(JSON.stringify(viewMode));
-      let count = 0;
-      for (let i in tempViewMode[project]){
-        i === selectedDevice ? tempViewMode[project][i] = true : tempViewMode[project][i] = false;
-        count++;
-        if (count === 2){
-          setViewMode({...tempViewMode})
-        }
-      }
-  }
-
   return (
     <>
     <Head>
@@ -98,16 +84,14 @@ function App({ windowSize }) {
       <Intro scrollIntoDiv={scrollIntoDiv}/>
       <PortfolioHeader windowSize={windowSize} scrollIntoDiv={scrollIntoDiv} />
       <div className='aboutSection'>
-        {/* about section with blog posts removed */}
-        {/* <About posts={posts.slice(0, windowSize.width && windowSize.width > 810 ? 3 : 2)}/> */}
         <About/>
       </div>
       <div className='mainSection'>
         <div style={{display: windowSize.width && windowSize.width > 640 ? 'none' : 'block'}} className={'projectSectionHeader'}>Projects</div>
-        <Project0 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
-        <Project1 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
-        <Project2 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
-        <Project3 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} selectDifferentView={selectDifferentView} viewMode={viewMode}/>
+        <Project0 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} />
+        <Project1 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} />
+        <Project2 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} />
+        <Project3 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} />
         <div className='projectOverlay'>
         </div>
       </div>

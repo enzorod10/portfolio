@@ -24,18 +24,6 @@ function Project3(props){
     props.handleExpandCollapse('project3')
   }
 
-  useEffect(() => {
-    if (props.viewMode.project3.computer){
-      setMediaShown(cvProjectGifComputer)
-    }
-    if (props.viewMode.project3.tablet){
-      setMediaShown(cvProjectGifTablet)
-    }
-    if (props.viewMode.project3.smartphone){
-      setMediaShown(cvProjectGifSmartphone)
-    }
-  }, [props.viewMode.project3])
-
     return(
       <div className=''>
         <div className='flex justify-center items-center sm:p-4 md:p-16'>

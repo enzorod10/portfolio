@@ -24,19 +24,6 @@ function Project2(props){
   const projectIntermission = () => {
     props.handleExpandCollapse('project2')
   }
-
-  useEffect(() => {
-    if (props.viewMode.project2.computer){
-      setMediaShown(battleshipGifComputer)
-    }
-    if (props.viewMode.project2.tablet){
-      setMediaShown(battleshipGifTablet)
-    }
-    if (props.viewMode.project2.smartphone){
-      setMediaShown(battleshipGifSmartphone)
-    }
-  }, [props.viewMode.project2])
-
     return(
         <div  className=''>
           <div className='flex justify-center items-center sm:p-4 md:p-16'>

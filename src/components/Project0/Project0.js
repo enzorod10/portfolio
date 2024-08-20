@@ -24,18 +24,6 @@ function Project0(props){
     props.handleExpandCollapse('project0')
   }
 
-  useEffect(() => {
-    if (props.viewMode.project0.computer){
-      setMediaShown(firstPickFitGifComputer)
-    }
-    if (props.viewMode.project0.tablet){
-      setMediaShown(firstPickFitGifTablet)
-    }
-    if (props.viewMode.project0.smartphone){
-      setMediaShown(firstPickFitGifSmartphone)
-    }
-  }, [props.viewMode.project0])
-
     return(
         <div className=''>
           <div className='flex justify-center items-center sm:p-4 md:p-16'>
