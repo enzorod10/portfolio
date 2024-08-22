@@ -21,7 +21,7 @@ function Contact(){
     
     return(
         <form style={{ position: 'relative' }} onSubmit={handleSubmit} className='contactContainer'>
-            <h2  className='text-white text-lg'>Get in touch</h2>
+            <h2  className='text-white text-2xl'>Get in touch</h2>
             <input required={true} name='name' placeholder='Name' className='contactSectionName' type='text'/>
             <input required={true} name='email' placeholder='Email' className='contactSectionEmail' type='email'/>
             <textarea required={true} name='message' placeholder='Message' className='contactSectionMessage' type='text' style={{resize: 'none'}}/>
