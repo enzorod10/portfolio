@@ -4,7 +4,7 @@ function Contact(){
     const [ state, handleSubmit ] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_LINK);
 
     const popUpMessageStyle = {
-        width: '350px',
+        width: '440px',
         height: state.succeeded ? '32px' : '85%',
         position: 'absolute',
         bottom: 0,
@@ -25,7 +25,7 @@ function Contact(){
             <input required={true} name='name' placeholder='Name' className='contactSectionName' type='text'/>
             <input required={true} name='email' placeholder='Email' className='contactSectionEmail' type='email'/>
             <textarea required={true} name='message' placeholder='Message' className='contactSectionMessage' type='text' style={{resize: 'none'}}/>
-            <div style={popUpMessageStyle}>
+            <div  style={popUpMessageStyle}>
                 {state.submitting && '...'}
                 {state.succeeded && 'Message sent!'}
             </div>
