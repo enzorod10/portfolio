@@ -1,5 +1,5 @@
 .fullPage{
-    min-height: calc(100vh - 65px);
+    /* min-height: calc(100vh - 65px); */
     background-color: rgb(26, 26, 26);
     top: 65px;
     position: sticky;
