@@ -1,39 +1,57 @@
 import { useForm } from "@formspree/react";
 
 function Contact(){
-    const [ state, handleSubmit ] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_LINK);
+    const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_LINK);
 
-    const popUpMessageStyle = {
-        width: '440px',
-        height: state.succeeded ? '32px' : '85%',
-        position: 'absolute',
-        bottom: 0,
-        backgroundColor: '#007989',
-        borderRadius: '5px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        visibility: ( state.submitting || state.succeeded ) ? 'visible' : 'hidden',
-        opacity: ( state.submitting || state.succeeded ) ? '100%' : '0',
-        transition: 'all 0.5s ease',
-        userSelect: 'none'
+    let buttonText;
+    if (state.submitting) {
+        buttonText = 'Submitting...';
+    } else if (state.errors.length > 0) {
+        buttonText = 'Something went wrong...';
+    } else if (state.succeeded) {
+        buttonText = 'Message successfully sent!';
+    } else {
+        buttonText = 'Submit';
     }
-    
-    return(
-        <form style={{ position: 'relative' }} onSubmit={handleSubmit} className='contactContainer'>
-            <h2  className='text-white text-2xl'>Get in touch</h2>
-            <input required={true} name='name' placeholder='Name' className='contactSectionName' type='text'/>
-            <input required={true} name='email' placeholder='Email' className='contactSectionEmail' type='email'/>
-            <textarea required={true} name='message' placeholder='Message' className='contactSectionMessage' type='text' style={{resize: 'none'}}/>
-            <div  style={popUpMessageStyle}>
-                {state.submitting && '...'}
-                {state.succeeded && 'Message sent!'}
+
+    return (
+        <form style={{ position: 'relative' }} onSubmit={handleSubmit}>
+            <div className="flex flex-col gap-3 w-full justify-center items-center">
+                <h2 className="text-white text-2xl">Get in touch</h2>
+                <input 
+                    disabled={state.submitting || state.succeeded} 
+                    required 
+                    name="name" 
+                    placeholder="Name" 
+                    className="contactSectionName" 
+                    type="text" 
+                />
+                <input 
+                    disabled={state.submitting || state.succeeded} 
+                    required 
+                    name="email" 
+                    placeholder="Email" 
+                    className="contactSectionEmail" 
+                    type="email" 
+                />
+                <textarea 
+                    disabled={state.submitting || state.succeeded} 
+                    required 
+                    name="message" 
+                    placeholder="Message" 
+                    className="contactSectionMessage" 
+                    style={{ resize: 'none' }} 
+                />
+                <button 
+                    disabled={state.submitting || state.succeeded} 
+                    type="submit" 
+                    className="sendButton"
+                >
+                    {buttonText}
+                </button>
             </div>
-            <button type='submit' disabled={state.submitting} className='sendButton'>
-              Submit
-            </button>
         </form>
-    )
+    );
 }
 
 export default Contact;
