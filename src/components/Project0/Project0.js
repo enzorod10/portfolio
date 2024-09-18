@@ -70,7 +70,7 @@ function Project0(props){
             </div>
           {props.windowSize.width && props.windowSize.width > 640 && 
             <div className='w-96'>
-              <img src={mediaShown.src} alt='gif of project' />
+              <img className='rounded-md' src={mediaShown.src} alt='gif of project' />
             </div>}
           </div>
         </div>

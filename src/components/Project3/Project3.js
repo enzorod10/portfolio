@@ -29,7 +29,7 @@ function Project3(props){
         <div className='flex justify-center items-center sm:p-4 md:p-16'>
           {props.windowSize.width && props.windowSize.width > 640 && 
             <div className='w-96'>
-              <img src={mediaShown.src} alt='gif of project' />
+              <img className='rounded-md' src={mediaShown.src} alt='gif of project' />
             </div>}
             <div className='sm:w-[500px] w-full h-full m-0 sm:-ml-8'>
               <div onClick={projectIntermission} style={{height: props.windowSize.width && props.windowSize.width <= 640 && !props.expandedProject.project3 && '35px' }} className='projectTitle'>
