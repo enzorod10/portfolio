@@ -4,11 +4,9 @@ import smartphoneIcon from '../../../public/assets/smartphoneIcon.png'
 import monitorBlackIcon from '../../../public/assets/monitorBlackIcon.png'
 import tabletBlackIcon from '../../../public/assets/tabletBlackIcon.png'
 import smartphoneBlackIcon from '../../../public/assets/smartphoneBlackIcon.png'
+import kickRealmImage from './assets/kick_realm.PNG';
 import linkIcon from '../../../public/assets/linkIcon.png'
 import githubRepoLink from '../../../public/assets/githubRepoLink.png'
-import cvProjectGifComputer from './assets/cv_project_gif_computer.gif'
-import cvProjectGifTablet from './assets/cv_project_gif_tablet.gif'
-import cvProjectGifSmartphone  from './assets/cv_project_gif_smartphone.gif'
 import htmlIcon from '../../../public/assets/stackImages/htmlIcon.svg'
 import cssIcon from '../../../public/assets/stackImages/cssIcon.svg'
 import javascriptIcon from '../../../public/assets/stackImages/javascriptIcon.svg'
@@ -18,7 +16,6 @@ import collapseIcon from '../../../public/assets/collapseIcon.png'
 import { useState, useEffect } from 'react'
 
 function Project3(props){
-  const [mediaShown, setMediaShown] = useState(cvProjectGifSmartphone)
 
   const projectIntermission = () => {
     props.handleExpandCollapse('project3')
@@ -29,7 +26,7 @@ function Project3(props){
         <div className='flex justify-center items-center sm:p-4 md:p-16'>
           {props.windowSize.width && props.windowSize.width > 640 && 
             <div className='w-96'>
-              <img className='rounded-md' src={mediaShown.src} alt='gif of project' />
+              <img className='rounded-md' src={kickRealmImage.src} alt='Kick Realm' />
             </div>}
             <div className='sm:w-[500px] w-full h-full m-0 sm:-ml-8'>
               <div onClick={projectIntermission} style={{height: props.windowSize.width && props.windowSize.width <= 640 && !props.expandedProject.project3 && '35px' }} className='projectTitle'>
@@ -47,7 +44,7 @@ function Project3(props){
                 </div>
                 {props.windowSize.width && props.windowSize.width <= 640 && 
                   <div className=''>
-                    <img src={mediaShown.src} alt='gif of project' />
+                    <img src={kickRealmImage.src} alt='gif of project' />
                   </div>}
                 <div className='technologyUsed'>
                   <div className='techIconContainer'>
