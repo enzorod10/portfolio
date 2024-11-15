@@ -24,11 +24,19 @@ export const projects = [
         techUsed: technologies.filter((tech, indx) => [0, 1, 2, 4].includes(indx))
     },
     {
+        name: 'First Pick Fit', 
+        info: 'A fitness tracker with drag-and-drop functionality for easy workout creation & tracking. Features an intuitive user interface to quickly create and schedule workouts, programs and exercises.',
+        image: 'first_pick_fit.PNG',
+        liveUrl: 'https://first-pick-fit.vercel.app/',
+        repoUrl: 'https://www.github.com/enzorod10/firstpickfit',
+        techUsed: technologies.filter((tech, indx) => [0, 1, 2, 12].includes(indx))
+    },
+    {
         name: 'Solteract', 
         info: 'A social media platform that gives users the ability to express themselves in their own personal space. Inspired by Twitter.',
         image: 'solteract.PNG',
         liveUrl: 'https://soterak-1f634.web.app',
         repoUrl: 'https://www.github.com/enzorod10/solteract',
         techUsed: technologies.slice(-5)
-    }
+    },
 ]

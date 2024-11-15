@@ -1,4 +1,3 @@
-import styles from './About.module.css';
 import nodejsIcon from '../../../public/assets/stackImages/nodejsIcon.svg';
 import mongodbIcon from '../../../public/assets/stackImages/mongodbIcon.svg';
 import gitIcon from '../../../public/assets/stackImages/gitIcon.svg';

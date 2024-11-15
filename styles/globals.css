@@ -23,7 +23,7 @@
 html,body{
     position: relative;
     overflow-x: clip;
-    /* background-color: rgb(26, 26, 26); */
+    background-color: rgb(26, 26, 26);
 }
 /* --------- Main Section --------- */
 

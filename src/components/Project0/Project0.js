@@ -39,10 +39,8 @@ function Project0(props){
                   <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href='https://github.com/enzorod10/first-pick-fit'> <img style={{width: '16px'}} src={githubRepoLink.src} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href='https://github.com/enzorod10/first-pick-fit'>Repo</a></div>
                 </div>
                 <div className=''>
-                  <p>
                   A fitness tracker with drag-and-drop functionality for easy workout creation & tracking.
-                  </p>
-                  <p>Features an intuitive user interface to quickly create and schedule workouts, programs and exercises. </p>
+                 Features an intuitive user interface to quickly create and schedule workouts, programs and exercises.
                 </div>
                 {props.windowSize.width && props.windowSize.width <= 640 && 
                 <div className=''>

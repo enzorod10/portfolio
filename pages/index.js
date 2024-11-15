@@ -10,6 +10,7 @@ import Project3 from '../src/components/Project3/Project3';
 import Head from 'next/head';
 import Project from '../src/components/Project';
 import { projects } from '../src/components/data';
+import Scene from '../src/components/Scene';
 
 export async function getStaticProps(){
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/posts`, { mode: 'cors' })
@@ -78,10 +79,10 @@ export default function App({ windowSize }) {
         const location = document.querySelector('.aboutSection')?.getBoundingClientRect().top
         if (location){
           if (location > 285 && !document.querySelector('.header')?.classList.contains('hide')){
-            document.querySelector('.header').classList.add('hide')
+            document.querySelector('.header')?.classList.add('hide')
           } 
           else if (location < 220 && document.querySelector('.header')?.classList.contains('hide')){
-            document.querySelector('.header').classList.remove('hide')
+            document.querySelector('.header')?.classList.remove('hide')
           }
         }
       } 
@@ -146,10 +147,11 @@ export default function App({ windowSize }) {
     <Head>
       <title>Portfolio</title>
     </Head>
-    <div className="App">
+    <div className="relative border-8 border-red-500 h-[100dvh] max-h-[100dvh]">
+      <Scene />
       {/* <Intro scrollIntoDiv={scrollIntoDiv}/> */}
-      <PortfolioHeader windowSize={windowSize} scrollIntoDiv={scrollIntoDiv} />
-      <div className='aboutSection'>
+      {/* <PortfolioHeader windowSize={windowSize} scrollIntoDiv={scrollIntoDiv} /> */}
+      <div className=''>
         {/* <About posts={posts.slice(0, windowSize.width && windowSize.width > 810 ? 3 : 2)}/> */}
         {/* about section with blog posts removed */}
         {/* <About posts={posts.slice(0, windowSize.width && windowSize.width > 810 ? 3 : 2)}/> */}
@@ -171,9 +173,9 @@ export default function App({ windowSize }) {
         <div className='projectOverlay'>
         </div>
       </div>
-      <div className='contactSection'>
+      {/* <div className='contactSection'>
         <Contact />
-      </div>
+      </div> */}
     </div>
     </>
   );
