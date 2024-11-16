@@ -147,16 +147,14 @@ export default function App({ windowSize }) {
     <Head>
       <title>Portfolio</title>
     </Head>
-    <div className="relative border-8 border-red-500 h-[100dvh] max-h-[100dvh]">
+    <div className="relative h-[100dvh] max-h-[100dvh] overflow-auto">
       <Scene />
       {/* <Intro scrollIntoDiv={scrollIntoDiv}/> */}
       {/* <PortfolioHeader windowSize={windowSize} scrollIntoDiv={scrollIntoDiv} /> */}
-      <div className=''>
         {/* <About posts={posts.slice(0, windowSize.width && windowSize.width > 810 ? 3 : 2)}/> */}
         {/* about section with blog posts removed */}
         {/* <About posts={posts.slice(0, windowSize.width && windowSize.width > 810 ? 3 : 2)}/> */}
         <About/>
-      </div>
       <div className='mainSection'>
         <div style={{display: windowSize.width && windowSize.width > 640 ? 'none' : 'block'}} className={'projectSectionHeader'}>Projects</div>
         {projects.map(proj => {
