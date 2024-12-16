@@ -391,20 +391,6 @@ html,body{
     font-size: 35px;
 }
 
-.project{
-    display: flex;
-    min-height: 600px;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    background-color: #313131;
-    border-radius: 5px;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 1;
-    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.281);
-}
-
 .projectMedia > img{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -423,47 +409,6 @@ html,body{
 
 .viewIcon > img{
     width: 24px;
-}
-
-.projectInfo{
-    width: 500px;
-    z-index: 3;
-}
-
-.projectTitle{
-    color: rgba(255, 255, 255, 0.904);
-    background-color: #0079897c;
-    width: fit-content;
-    padding: 5px 20px;
-    font-size: 20px;
-    margin-left: 5%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.aboutProject{
-    background-color: white;
-    border-radius: 5px;
-    padding: 0px 15px;
-    height: 100%;
-    color: var(--deep-purple);
-    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.452);
-    position: relative;
-}
-
-.projectLinks{
-    height: 10%;
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 1px black solid;
-}
-
-.technologyUsed{
-    border-top: 1px var(--deep-purple) solid;
-    display: flex;
-    height: 25%;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
 /* --------- Contact Section --------- */
@@ -513,20 +458,6 @@ html,body{
 }
 
 /* global */
-
-.techIconContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    font-style: italic;
-    font-size: 11px;
-    color: var(--deep-black);
-}
-
-.techIcon{
-    width: 32px;
-}
 
 @media screen and (max-width: 1300px){
     .name{
@@ -747,84 +678,11 @@ html,body{
         border-radius: 5px;
     }
 
-    .project{
-        min-height: 0px;
-        box-sizing: border-box;
-        box-shadow: none;
-        height: 100%;
-        border-radius: 0px;
-    }
-
-    .projectInfo{
-        margin: 0px 0px !important;
-        width: 100%;
-        height: 100%;
-        border: 3px #0079897c solid;
-        border-radius: 5px;
-    }
-
     .projectMedia{
         display: flex;
     }
 
-    .projectTitle{
-        margin: 0 auto;
-        width: 100%;
-        padding: 0px;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        height: 35px;
-    }
-
-    .aboutProject{
-        padding: 0px 1%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .projectLinks{
-        max-height: 50px;
-        height: 35px;
-    }
-
-    .technologyUsed{
-        height: 60px;
-    }
-
-    .technologyUsed > svg{
-        width: 40px;
-    }
-
     .header{
         padding: 0px 20px;
-    }
-}
-
-@media screen and (min-width: 640px){
-    .project{
-        padding: 3%;
-    }
-
-    .projectTitle{
-        color: var(--deep-black);
-        background-color:  rgba(255, 255, 255, 0.904);
-        margin: 0 auto;
-        width: 75%;
-        text-align: center;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    }
-
-    .projectInfo{
-        min-width: 350px;
-    }
-
-    .projectLinks{
-        padding: 10px 0px;
-    }
-
-    .technologyUsed{
-        padding: 10px 0px;
     }
 }

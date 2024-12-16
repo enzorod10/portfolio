@@ -1,15 +1,15 @@
 import styles from './About.module.css';
 import sampleImage from '../../../public/assets/sampleImage.png';
-import nodejsIcon from '../../../public/assets/stackImages/nodejsIcon.svg';
-import mongodbIcon from '../../../public/assets/stackImages/mongodbIcon.svg';
-import gitIcon from '../../../public/assets/stackImages/gitIcon.svg';
-import jestIcon from '../../../public/assets/stackImages/jestIcon.svg';
-import tailwindIcon from '../../../public/assets/stackImages/tailwindIcon.svg';
-import nextjsIcon from '../../../public/assets/stackImages/nextjsIcon.svg';
-import reduxIcon from '../../../public/assets/stackImages/reduxIcon.svg';
-import blenderIcon from '../../../public/assets/stackImages/blenderIcon.svg';
-import typescriptIcon from '../../../public/assets/stackImages/typescriptIcon.svg';
-import psqlIcon from '../../../public/assets/stackImages/psqlIcon.svg';
+import nodejsIcon from '../../../public/stackImages/nodejsIcon.svg';
+import mongodbIcon from '../../../public/stackImages/mongodbIcon.svg';
+import gitIcon from '../../../public/stackImages/gitIcon.svg';
+import jestIcon from '../../../public/stackImages/jestIcon.svg';
+import tailwindIcon from '../../../public/stackImages/tailwindIcon.svg';
+import nextjsIcon from '../../../public/stackImages/nextjsIcon.svg';
+import reduxIcon from '../../../public/stackImages/reduxIcon.svg';
+import blenderIcon from '../../../public/stackImages/blenderIcon.svg';
+import typescriptIcon from '../../../public/stackImages/typescriptIcon.svg';
+import psqlIcon from '../../../public/stackImages/psqlIcon.svg';
 
 function About(){
     return(

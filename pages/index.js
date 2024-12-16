@@ -8,6 +8,8 @@ import Project1 from '../src/components/Project1/Project1';
 import Project2 from '../src/components/Project2/Project2';
 import Project3 from '../src/components/Project3/Project3';
 import Head from 'next/head';
+import { projects } from '../src/data';
+import Project from '../src/components/Project';
 
 function App({ windowSize }) {
     // Depending on scroll location, header will hide or show
@@ -52,27 +54,15 @@ function App({ windowSize }) {
       }
     }
 
-  // For smaller screen widths, expand/collapse system on projects
-
-  const [expandedProject, setExpandedProject] = useState({
-    project0: false,
-    project1: false,
-    project2: false,
-    project3: false,
-  })
+  const [expandedProject, setExpandedProject] = useState(undefined)
 
   const handleExpandCollapse = (projectName) => {
-    let tempExpandedProject = {...expandedProject}
-
-    for (let x in expandedProject){
-      if (x === projectName){
-        !tempExpandedProject[x] ? tempExpandedProject[x] = true : tempExpandedProject[x] = false
-      } else {
-        tempExpandedProject[x] = false
-      }
+    if (projectName === expandedProject) {
+      setExpandedProject(undefined) 
+      return
     }
     
-    setExpandedProject(tempExpandedProject)
+    setExpandedProject(projects.find(proj => proj.name === projectName).name)
   }
 
   return (
@@ -88,10 +78,13 @@ function App({ windowSize }) {
       </div>
       <div className='mainSection'>
         <div style={{display: windowSize.width && windowSize.width > 640 ? 'none' : 'block'}} className={'projectSectionHeader'}>Projects</div>
-        <Project0 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} />
+        {projects.map(project => {
+          return <Project key={project.name} windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} project={project}/>
+        })}
+        {/* <Project0 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} />
         <Project1 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} />
         <Project2 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} />
-        <Project3 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} />
+        <Project3 windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} /> */}
         <div className='projectOverlay'>
         </div>
       </div>
