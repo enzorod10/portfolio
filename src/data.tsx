@@ -1,30 +1,52 @@
 import { Project, Tech } from "./types"
 
-const technologiesUsed: Tech[] = [
+export const technologiesUsed: Tech[] = [
     {
-        name: 'HTML',
-        image: '/stackImages/htmlIcon.svg'
-    }, 
-    {
-        name: 'CSS',
-        image: '/stackImages/cssIcon.svg'
-    },
-    {
-        name: 'Javascript',
-        image: '/stackImages/javascriptIcon.svg'
-    },
-    {
-        name: 'React',
-        image: '/stackImages/reactIcon.svg'
+        name: 'TypeScript',
+        image: '/stackImages/typescriptIcon.svg'
     },
     {
         name: 'Next',
         image: '/stackImages/nextjsIcon.svg'
     },
     {
-        name: 'firebase',
+        name: 'React',
+        image: '/stackImages/reactIcon.svg'
+    },
+    {
+        name: 'PostgreSQL',
+        image: '/stackImages/postgresqlIcon.svg'
+    },
+    {
+        name: 'Redux',
+        image: '/stackImages/reduxIcon.svg'
+    },
+    {
+        name: 'MongoDB',
+        image: '/stackImages/mongodbIcon.svg'
+    },
+    {
+        name: 'Tailwind',
+        image: '/stackImages/tailwindIcon.svg'
+    },
+    {
+        name: 'Firebase',
         image: '/stackImages/firebaseIcon.svg'
-    }
+    },
+    {
+        name: 'Supabase',
+        image: '/stackImages/supabaseIcon.svg'
+    },
+    {
+        name: 'Git',
+        image: '/stackImages/gitIcon.svg'
+    },
+
+    {
+        name: 'Jest',
+        image: '/stackImages/jestIcon.svg'
+    },
+    
 ]
 
 const createTechnologiesArr = (techUsed: string[]) => {
@@ -38,7 +60,7 @@ export const projects: Project[] = [
         info: 'A platform for Kick streamers and viewers, where users can invest in streamers using virtual currency, track real-time analytics, and view upcoming stream schedules. Streamers can apply for affiliation, and users can apply for admin or mod roles, fostering a vibrant and interactive community.',
         liveLink: 'https://www.kickrealm.com/',
         codeLink: 'https://github.com/enzorod10/kickrealm',
-        techUsed: createTechnologiesArr(['Next'])
+        techUsed: createTechnologiesArr(['Next', 'Tailwind', 'Supabase', 'PostgreSQL'])
     },
     {
         name: 'First Pick Fit',
@@ -46,7 +68,7 @@ export const projects: Project[] = [
         info: 'A fitness tracker with drag-and-drop functionality for easy workout creation & tracking. Features an intuitive user interface to quickly create and schedule workouts, programs and exercises.',
         liveLink: 'https://first-pick-fit.vercel.app/',
         codeLink: 'https://github.com/enzorod10/first-pick-fit',
-        techUsed: createTechnologiesArr(['Next', 'Firebase'])
+        techUsed: createTechnologiesArr(['Next', 'Firebase', 'Redux'])
     },
     {
         name: 'Interactive Playroom',
@@ -54,7 +76,7 @@ export const projects: Project[] = [
         info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, neque pariatur a ea ipsa, qui similique quisquam unde, corporis cum quibusdam beatae deleniti iste cumque! Sit dicta tempore ea assumenda?',
         liveLink: 'https://games-beta-two.vercel.app/',
         codeLink: 'https://github.com/enzorod10/Interactive-Playroom',
-        techUsed: createTechnologiesArr(['Next'])
+        techUsed: createTechnologiesArr(['Next', 'Tailwind'])
     },
     {
         name: 'Solteract',
