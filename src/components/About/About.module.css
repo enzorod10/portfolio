@@ -16,7 +16,6 @@
     max-width: 100%;
     margin: 0 auto;
     justify-content: center;
-
 }
 
 .top{
@@ -63,40 +62,12 @@
     justify-content: center;
 }
 
-.iconsContainer{
-    border: 3px #0079897c solid;
-    position: relative;
-    border-radius: 10px;
-    display: flex;
-    padding: 20px 5px;
-    column-gap: 15px;
-    row-gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative
-}
-
 .iconsContainerTitle{
     position: absolute;
     color: rgba(255, 255, 255, 0.904);
     top: -8px;
     background-color: rgb(26, 26, 26);
     padding: 0px 10px;
-}
-
-.techIconContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    font-style: italic;
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.904);
-}
-
-.techIcon{
-    width: 40px;
 }
 
 .bottom{
@@ -231,21 +202,10 @@
         padding: 0px 4%;
     }
 
-    .iconsContainer,
     .recentBlogPostsContainer{
         width: 100%;
         max-width: 100%;
         justify-content: space-evenly;
-    }
-
-    .techIconContainer{
-        gap: 5px;
-    }
-    .techIcon{
-        width: 52px;
-    }
-    .techText{
-        font-size: 15px;
     }
 }
 

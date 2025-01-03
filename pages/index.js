@@ -5,7 +5,7 @@ import PortfolioHeader from '../src/components/PortfolioHeader/PortfolioHeader';
 import Contact from '../src/components/Contact/Contact';
 import Head from 'next/head';
 import { projects } from '../src/data';
-import Project from '../src/components/Project';
+import Project, { MobileViewProject } from '../src/components/Project';
 
 function App({ windowSize }) {
     // Depending on scroll location, header will hide or show
@@ -58,7 +58,7 @@ function App({ windowSize }) {
       return
     }
     
-    setExpandedProject(projects.find(proj => proj.name === projectName).name)
+    setExpandedProject(projects.find(proj => proj.name === projectName))
   }
 
   return (
@@ -74,9 +74,12 @@ function App({ windowSize }) {
         </div>
         <div className='mainSection'>
           <div style={{display: windowSize.width && windowSize.width > 640 ? 'none' : 'block'}} className={'projectSectionHeader'}>Projects</div>
-          {projects.map(project => {
-            return <Project key={project.name} windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} project={project}/>
-          })}
+          {
+            expandedProject ? <MobileViewProject project={expandedProject}/> :
+            projects.map(project => {
+              return <Project key={project.name} windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} project={project}/>
+            })
+          }
           <div className='projectOverlay'>
           </div>
         </div>
