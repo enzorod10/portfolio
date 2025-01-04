@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import blackLogo from '../../../public/assets/enzo-cs-logo-black.png'
-import menuIcon from '../../../public/assets/menuIcon.png'
+import blackLogo from '../../public/assets/enzo-cs-logo-black.png'
+import menuIcon from '../../public/assets/menuIcon.png'
 
 function PortfolioHeader(props){
   const [menuDisplay, setMenuDisplay] = useState(false);

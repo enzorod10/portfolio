@@ -1,10 +1,18 @@
 import React from 'react'
 import { Tech } from '../types'
 import { Project as ProjectType } from '../types'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../components/ui/dialog";
 
 function Project({ project, handleExpandCollapse, windowSize, expandedProject }){
   const projectIntermission = () => {
-      handleExpandCollapse(project.name)
+    handleExpandCollapse(project.name)
   }
 
   return(
@@ -54,16 +62,20 @@ function Project({ project, handleExpandCollapse, windowSize, expandedProject })
 export const MobileViewProject = ({ project }: { project: ProjectType}) => {
   
   return(
-    <div className='border flex justify-center items-center fixed top-0 left-0 h-[100dvh] w-full z-40 '>
-      <div className='text-red-500 rounded-md w-full h-4/5 mx-8 bg-slate-100 z-50 blur-none'>
-      <div className='border flex justify-between items-center p-2'>
-        {project.name}
-      </div>
-      <div className='border flex justify-between items-center p-2'>
-        {project.info}
-      </div>  
-      </div>
+    <div>
 
+    <Dialog>
+      <DialogTrigger>Open</DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Are you absolutely sure?</DialogTitle>
+          <DialogDescription>
+            This action cannot be undone. This will permanently delete your account
+            and remove your data from our servers.
+          </DialogDescription>
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import '../styles/globals.css';
+import '../src/globals.css';
 import useWindowSize from '../hooks/useWindowSize'
 
 export default function App({ Component, pageProps }) {

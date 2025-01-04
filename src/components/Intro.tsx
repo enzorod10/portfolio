@@ -1,10 +1,10 @@
-import folderIcon from '../../../public/assets/folderIcon.png';
-import mailIcon from '../../../public/assets/mailIcon.png';
-import githubIcon from '../../../public/assets/githubIcon.png';
-import linkedinIcon from '../../../public/assets/linkedinIcon.png';
-import aboutIcon from '../../../public/assets/aboutIcon.png';
-import blogIcon from '../../../public/assets/blogIcon.png';
-import xIcon from '../../../public/assets/xIcon.png';
+import folderIcon from '../../public/assets/folderIcon.png';
+import mailIcon from '../../public/assets/mailIcon.png';
+import githubIcon from '../../public/assets/githubIcon.png';
+import linkedinIcon from '../../public/assets/linkedinIcon.png';
+import aboutIcon from '../../public/assets/aboutIcon.png';
+import blogIcon from '../../public/assets/blogIcon.png';
+import xIcon from '../../public/assets/xIcon.png';
 import { useRouter } from 'next/router';
 
 function Intro(props){

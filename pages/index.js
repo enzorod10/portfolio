@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import Intro from '../src/components/Intro/Intro';
-import About from '../src/components/About/About';
-import PortfolioHeader from '../src/components/PortfolioHeader/PortfolioHeader';
-import Contact from '../src/components/Contact/Contact';
+import Intro from '../src/components/Intro';
+import About from '../src/components/About';
+import PortfolioHeader from '../src/components/PortfolioHeader';
+import Contact from '../src/components/Contact';
 import Head from 'next/head';
 import { projects } from '../src/data';
 import Project, { MobileViewProject } from '../src/components/Project';
