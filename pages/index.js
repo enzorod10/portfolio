@@ -5,7 +5,7 @@ import PortfolioHeader from '../src/components/PortfolioHeader';
 import Contact from '../src/components/Contact';
 import Head from 'next/head';
 import { projects } from '../src/data';
-import Project, { MobileViewProject } from '../src/components/Project';
+import { ProjectLargeView, ProjectSmallView, OpenedProject } from '../src/components/Project';
 
 function App({ windowSize }) {
     // Depending on scroll location, header will hide or show
@@ -50,14 +50,9 @@ function App({ windowSize }) {
       }
     }
 
-  const [expandedProject, setExpandedProject] = useState(undefined)
+  const [openProject, setOpenProject] = useState(undefined)
 
-  const handleExpandCollapse = (projectName) => {
-    if (projectName === expandedProject) {
-      setExpandedProject(undefined) 
-      return
-    }
-    
+  const handleOpenProject = (projectName) => {
     setExpandedProject(projects.find(proj => proj.name === projectName))
   }
 
@@ -73,13 +68,13 @@ function App({ windowSize }) {
           <About/>
         </div>
         <div className='mainSection'>
-          <div style={{display: windowSize.width && windowSize.width > 640 ? 'none' : 'block'}} className={'projectSectionHeader'}>Projects</div>
-          {
-            expandedProject ? <MobileViewProject project={expandedProject}/> :
-            projects.map(project => {
-              return <Project key={project.name} windowSize={windowSize} handleExpandCollapse={handleExpandCollapse} expandedProject={expandedProject} project={project}/>
-            })
-          }
+            {openProject && <OpenedProject project={openProject} setOpenProject={setOpenProject}/>}
+            {projects.map(project => {
+              return (
+                windowSize.width <= 640 ? <ProjectSmallView key={project.name} project={project} setOpenProject={setOpenProject}/> : 
+                <ProjectLargeView key={project.name} project={project}/>
+              )
+            })}
           <div className='projectOverlay'>
           </div>
         </div>
