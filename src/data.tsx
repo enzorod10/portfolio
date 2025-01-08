@@ -72,7 +72,7 @@ export const projects: Project[] = [
     },
     {
         name: 'Interactive Playroom',
-        image: '/kick_realm.PNG',
+        image: '/interactive_playroom.PNG',
         info: 'A dynamic collection of engaging mini-games, including Stick Hero, Battleship, Wordle, Hangman, Trivia, and a puzzle game. This project showcases creative game design and development, offering interactive experiences that combine strategy, skill, and fun for players of all ages.',
         liveLink: 'https://games-beta-two.vercel.app/',
         codeLink: 'https://github.com/enzorod10/Interactive-Playroom',
