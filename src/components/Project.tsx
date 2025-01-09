@@ -11,11 +11,11 @@ import {
 } from "../components/ui/dialog";
 import { Button } from './ui/button';
 
-function ProjectLargeView({ project }){
+function ProjectLargeView({ project, isEven }: { project: ProjectType, isEven: boolean  }) {
     return(
         <div>
-          <div className='flex justify-center items-center sm:p-4 md:p-16'>
-            <div className='w-full max-w-lg sm:-mr-5'>
+          <div className={`flex ${isEven ? 'flex-row' : 'flex-row-reverse'} justify-center items-center sm:p-4 md:p-16`}>
+            <div className={`w-full max-w-lg ${ isEven ? '-mr-5' : '-ml-5'}`}>
               <div className='projectTitle flex justify-center items-center text-slate-100 sm:text-slate-900 bg-[#0079897c] sm:bg-slate-200 w-fit p-0.5 text-lg rounded sm:rounded-none sm:rounded-t mx-auto w-full sm:w-3/4'>
                 {project.name}
               </div>
@@ -39,7 +39,7 @@ function ProjectLargeView({ project }){
               </div>
             </div>
             <div className='w-96'>
-              <img className='rounded-md' src={project.image} alt={project.name} />
+              <img className='rounded-md' src={project.pc_image} alt={project.name} />
             </div>
           </div>
         </div>
@@ -58,8 +58,9 @@ const ProjectSmallView = ({ project, setOpenProject}: { project: ProjectType, se
   )
 }
 
-const OpenedProject = ({ project, setOpenProject }) => {
+const OpenedProject = ({ project, setOpenProject }: { project: ProjectType, setOpenProject: React.Dispatch<React.SetStateAction<string | undefined>>}) => {
   const [open, onSetOpen] = React.useState(project ? true : false);
+  const [highlightedIndex, setHighlightedIndex] = React.useState(0);
 
   return (
       <Dialog open={open} onOpenChange={onSetOpen}>
@@ -75,8 +76,15 @@ const OpenedProject = ({ project, setOpenProject }) => {
             <DialogDescription className='text-left'>
               {project.info}
             </DialogDescription>
-            <div className='h-64 overflow-hidden'>
-              <img className='rounded-md' src={project.image} alt={project.name} />
+            <div className='overflow-hidden border border-slate-900 rounded-md p-2 flex flex-col gap-2'>
+              <img className='h-64 object-cover w-full rounded-md rounded-md' src={project.mobile_images[highlightedIndex]} alt={project.name} />
+              <div className='flex justify-center gap-2'>
+                {project.mobile_images.map((image, index) => {
+                  return (
+                    <img onClick={() => setHighlightedIndex(index)} key={index} src={image} className={`h-12 ${highlightedIndex === index ? 'border border-slate-900' : ''} w-12 rounded-md`} />
+                  )
+                })}
+              </div>
             </div>
             <div className='flex justify-between items-center'>
               <div className='flex items-center justify-evenly w-full '>

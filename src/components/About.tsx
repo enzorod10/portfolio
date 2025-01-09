@@ -3,8 +3,8 @@ import { technologiesUsed } from '../data';
 
 function About(){
     return(
-        <div className='p-5 pb-0 flex flex-col gap-5 justify-center max-w-2xl mx-auto'>
-            <div className='flex justify-center items-center gap-5'>
+        <div className='p-5 pb-0 flex flex-col gap-5 justify-center max-w-3xl mx-auto'>
+            <div className='flex justify-center items-center gap-5 md:gap-0'>
                 <div className='w-2/5 flex justify-center'>
                     <img className='w-48' src={sampleImage.src} alt='sample' />
                 </div>
@@ -12,7 +12,7 @@ function About(){
                     <div className="text-2xl">
                         Hello there
                     </div>
-                    <div className="text-sm sm:text-md">
+                    <div className="text-sm sm:text-md md:text-lg">
                         I'm Enzo Rodriguez, a New Jersey-based developer with experience
                         in the frontend and backend. I enjoy bringing ideas to life in the browser 
                         through code.

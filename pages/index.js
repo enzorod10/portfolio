@@ -69,10 +69,10 @@ function App({ windowSize }) {
         </div>
         <div className='mainSection'>
             {openProject && <OpenedProject project={openProject} setOpenProject={setOpenProject}/>}
-            {projects.map(project => {
+            {projects.map((project, index) => {
               return (
-                windowSize.width <= 640 ? <ProjectSmallView key={project.name} project={project} setOpenProject={setOpenProject}/> : 
-                <ProjectLargeView key={project.name} project={project}/>
+                windowSize.width < 640 ? <ProjectSmallView key={project.name} project={project} setOpenProject={setOpenProject}/> : 
+                <ProjectLargeView key={project.name} project={project} isEven={index % 2 === 0}/>
               )
             })}
           <div className='projectOverlay'>
