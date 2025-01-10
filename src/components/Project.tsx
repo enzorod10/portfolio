@@ -76,12 +76,12 @@ const OpenedProject = ({ project, setOpenProject }: { project: ProjectType, setO
             <DialogDescription className='text-left'>
               {project.info}
             </DialogDescription>
-            <div className='overflow-hidden border border-slate-900 rounded-md p-2 flex flex-col gap-2'>
+            <div className='overflow-hidden border border-slate-500 rounded-md p-2 flex flex-col gap-2'>
               <img className='h-64 object-cover w-full rounded-md rounded-md' src={project.mobile_images[highlightedIndex]} alt={project.name} />
               <div className='flex justify-center gap-2'>
                 {project.mobile_images.map((image, index) => {
                   return (
-                    <img onClick={() => setHighlightedIndex(index)} key={index} src={image} className={`h-12 ${highlightedIndex === index ? 'border border-slate-900' : ''} w-12 rounded-md`} />
+                    <img onClick={() => setHighlightedIndex(index)} key={index} src={image} className={`h-12 ${highlightedIndex === index ? 'border border-slate-900 p-0.5' : ''} w-12 rounded-md`} />
                   )
                 })}
               </div>
