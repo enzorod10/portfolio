@@ -67,7 +67,7 @@ function PortfolioHeader(props){
           <img src={blackLogo.src} alt='Enzo Logo' />
         </div>
         {props.windowSize.width && props.windowSize.width > 800 ? 
-          <div className='directory'>
+          <div className='directory text-lg'>
             <div onClick={() => props.scrollIntoDiv('about')}>
               ABOUT
             </div>

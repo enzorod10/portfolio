@@ -66,7 +66,7 @@ export const projects: Project[] = [
     {
         name: 'First Pick Fit',
         pc_image: '/first_pick_fit.PNG',
-        mobile_images: ['/kick_realm_mobile.PNG'],
+        mobile_images: ['/first_pick_fit.PNG', '/first_pick_fit_mobile_0.PNG'],
         info: 'A fitness tracker with drag-and-drop functionality for easy workout creation & tracking. Features an intuitive user interface to quickly create and schedule workouts, programs and exercises.',
         liveLink: 'https://first-pick-fit.vercel.app/',
         codeLink: 'https://github.com/enzorod10/first-pick-fit',
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     {
         name: 'Interactive Playroom',
         pc_image: '/interactive_playroom.PNG',
-        mobile_images: ['/kick_realm_mobile.PNG'],
+        mobile_images: ['/interactive_playroom.PNG'],
         info: 'A dynamic collection of engaging mini-games, including Stick Hero, Battleship, Wordle, Hangman, Trivia, and a puzzle game. This project showcases creative game design and development, offering interactive experiences that combine strategy, skill, and fun for players of all ages.',
         liveLink: 'https://games-beta-two.vercel.app/',
         codeLink: 'https://github.com/enzorod10/Interactive-Playroom',
@@ -84,8 +84,8 @@ export const projects: Project[] = [
     {
         name: 'Solteract',
         pc_image: '/solteract.PNG',
-        mobile_images: ['/kick_realm_mobile.PNG'],
-        info: 'A social media platform that gives users the ability to express themselves in their own personal space. Inspired by twitter. Users have their own timelines & feeds, are able to communicate with each other through transmissions (tweets) which can be text and/or media. Users can customize their profile name, username, header, & profile picture.',
+        mobile_images: ['/solteract.PNG'],
+        info: 'A social media platform that gives users the ability to express themselves in their own personal space. Inspired by twitter. Users have their own timelines & feeds, are able to communicate with each other through transmissions (tweets) which can be text and/or media.',
         liveLink: 'https://soterak-1f634.web.app/',
         codeLink: 'https://github.com/enzorod10/solteract',
         techUsed: createTechnologiesArr(['React', 'Firebase'])

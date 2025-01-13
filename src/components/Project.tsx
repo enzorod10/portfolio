@@ -76,8 +76,10 @@ const OpenedProject = ({ project, setOpenProject }: { project: ProjectType, setO
             <DialogDescription className='text-left'>
               {project.info}
             </DialogDescription>
-            <div className='overflow-hidden border border-slate-500 rounded-md p-2 flex flex-col gap-2'>
-              <img className='h-64 object-cover w-full rounded-md rounded-md' src={project.mobile_images[highlightedIndex]} alt={project.name} />
+            <div className='overflow-hidden border border-slate-300 rounded-md p-2 flex flex-col gap-2'>
+              <div className='h-48 overflow-auto'>
+                <img className='object-fit w-full rounded-md rounded-md' src={project.mobile_images[highlightedIndex]} alt={project.name} />
+              </div>
               <div className='flex justify-center gap-2'>
                 {project.mobile_images.map((image, index) => {
                   return (
