@@ -424,7 +424,6 @@ html,body{
 }
 
 .directory{
-    display: flex;
     gap: 15px;
 }
 
