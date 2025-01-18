@@ -53,10 +53,6 @@ function App({ windowSize }) {
 
   const [openProject, setOpenProject] = useState(undefined)
 
-  const handleOpenProject = (projectName) => {
-    setExpandedProject(projects.find(proj => proj.name === projectName))
-  }
-
   return (
     <>
       <Head>
@@ -64,17 +60,17 @@ function App({ windowSize }) {
       </Head>
       <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
-          >
+      >
         <div className="App">
           <Intro scrollIntoDiv={scrollIntoDiv}/>
           <PortfolioHeader windowSize={windowSize} scrollIntoDiv={scrollIntoDiv} />
           <div className='aboutSection'>
             <About/>
           </div>
-          <div className='mainSection'>
+          <div className='mainSection flex flex-col p-4 gap-4 pb-0 sm:gap-0 sm:p-0'>
               {openProject && <OpenedProject project={openProject} setOpenProject={setOpenProject}/>}
               {projects.map((project, index) => {
                 return (

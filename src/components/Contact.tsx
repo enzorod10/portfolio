@@ -18,13 +18,13 @@ function Contact(){
     }
 
     return (
-        <form onSubmit={handleSubmit} className="p-4 text-secondary">
+        <form onSubmit={handleSubmit} className="p-4 text-primary">
             <div className="flex flex-col gap-4 w-full justify-center items-center max-w-lg mx-auto">
                 <h2 className="text-white text-2xl">Get in touch</h2>
                 <Input disabled={state.submitting || state.succeeded} required name="name" type='text' placeholder="Name"/>
                 <Input disabled={state.submitting || state.succeeded} required name="email" type='email' placeholder="Email"/>
                 <Textarea disabled={state.submitting || state.succeeded} required name="message" placeholder="Message"/>
-                <Button variant="outline" disabled={state.submitting || state.succeeded} type="submit">
+                <Button disabled={state.submitting || state.succeeded} type="submit">
                     {buttonText}
                 </Button>
             </div>

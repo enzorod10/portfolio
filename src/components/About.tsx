@@ -3,7 +3,7 @@ import { technologiesUsed } from '../data';
 
 function About(){
     return(
-        <div className='p-5 pb-0 flex flex-col gap-5 justify-center max-w-3xl mx-auto'>
+        <div className='p-5 pb-0 flex flex-col gap-5 sm:gap-8 justify-center max-w-3xl mx-auto'>
             <div className='flex justify-center items-center gap-5 md:gap-0'>
                 <div className='w-2/5 flex justify-center '>
                     <img className='w-48' src={sampleImage.src} alt='sample' />
@@ -21,7 +21,7 @@ function About(){
             </div>
             <div className="flex justify-center">
                 <div className='relative flex flex-wrap border border-[#0079897c] rounded-lg justify-center p-5 gap-5 w-full max-w-2xl'>
-                    <div className='absolute -top-4 bg-[rgb(26,26,26)] text-white p-1 px-2 rounded-lg'>
+                    <div className='absolute -top-4 bg-background text-white p-1 px-2 rounded-lg'>
                         Languages & Tools
                     </div>
                     {technologiesUsed.map((tech, index) => {
