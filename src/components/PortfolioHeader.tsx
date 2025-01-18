@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
 import blackLogo from '../../public/assets/enzo-cs-logo-black.png'
-import menuIcon from '../../public/assets/menuIcon.png'
+import { ModeToggle } from './ui/theme-button';
 
 function PortfolioHeader(props){
   return(
@@ -19,6 +18,7 @@ function PortfolioHeader(props){
             CONTACT
           </div>
         </div>
+        {/* <ModeToggle /> */}
       </div>
   )
 }

@@ -467,52 +467,6 @@ html,body{
     width: 24px;
 }
 
-/* --------- Contact Section --------- */
-
-.contactSection{
-    padding: 15px 0px;
-    background-color: rgb(26, 26, 26);
-    width: 100%;
-}
-
-.contactHeader{
-    text-align: center;
-    color: rgba(255, 255, 255, 0.904);
-}
-
-.contactSectionName,
-.contactSectionEmail,
-.contactSectionMessage{
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;    
-    font-size: 18px;
-    min-width: 350px;
-    width: 23%;
-}
-
-.contactSectionName:focus,
-.contactSectionEmail:focus,
-.contactSectionMessage:focus{
-    outline: none;
-}
-
-.contactSectionMessage{
-    height: 100px;
-}
-
-.sendButton{
-    padding: 5px 10px;    
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-    background-color: #EFEFEF !important;
-    color: #000000 !important;
-    min-width: 350px;
-    width: 23%;
-}
-
 /* global */
 
 @media screen and (max-width: 1300px){

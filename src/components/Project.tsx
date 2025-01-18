@@ -14,9 +14,9 @@ import { Button } from './ui/button';
 function ProjectLargeView({ project, isEven }: { project: ProjectType, isEven: boolean  }) {
     return(
         <div>
-          <div className={`flex ${isEven ? 'flex-row' : 'flex-row-reverse'} justify-center items-center sm:p-4 md:p-16`}>
+          <div className={`flex ${isEven ? 'flex-row' : 'flex-row-reverse'} justify-center items-center sm:p-4 md:p-16 text-secondary`}>
             <div className={`w-full max-w-lg ${ isEven ? '-mr-5' : '-ml-5'}`}>
-              <div className='projectTitle flex justify-center items-center text-slate-100 sm:text-slate-900 bg-[#0079897c] sm:bg-slate-200 w-fit p-0.5 text-lg rounded sm:rounded-none sm:rounded-t mx-auto w-full sm:w-3/4'>
+              <div className='flex justify-center items-center bg-[#0079897c] sm:bg-primary w-fit p-0.5 text-lg rounded sm:rounded-none sm:rounded-t mx-auto w-full sm:w-3/4'>
                 {project.name}
               </div>
               <div className='relative flex flex-col h-full bg-slate-100 gap-2 px-4 rounded shadow-lg'>
@@ -24,9 +24,7 @@ function ProjectLargeView({ project, isEven }: { project: ProjectType, isEven: b
                   <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href={project.liveLink}> <img style={{width: '16px'}} src={'/assets/linkIcon.png'} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href={project.liveLink}>Live</a></div>
                   <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href={project.codeLink}> <img style={{width: '16px'}} src={'/assets/githubRepoLink.png'} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href={project.codeLink}>Repo</a></div>
                 </div>
-                <div>
-                    {project.info}
-                </div>
+                {project.info}
                 <div className='p-2 flex items-center justify-evenly border-t border-slate-900'>
                   {project.techUsed.map((tech: Tech) => {
                       return (
@@ -50,7 +48,7 @@ const ProjectSmallView = ({ project, setOpenProject}: { project: ProjectType, se
   return(
     <div className='flex justify-center items-center sm:p-4 md:p-16'>
       <div onClick={() => setOpenProject(project)} className='w-full max-w-lg sm:-mr-5'>
-        <div className='projectTitle flex justify-center items-center text-slate-100 sm:text-slate-900 bg-[#0079897c] sm:bg-slate-200 w-fit p-0.5 text-lg rounded sm:rounded-none sm:rounded-t mx-auto w-full sm:w-3/4'>
+        <div className='projectTitle flex justify-center items-center bg-[#0079897c] sm:bg-slate-200 w-fit p-0.5 text-lg rounded sm:rounded-none sm:rounded-t mx-auto w-full sm:w-3/4'>
           {project.name}
         </div>
       </div>

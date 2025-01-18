@@ -1,4 +1,7 @@
 import { useForm } from "@formspree/react";
+import { Textarea } from "@/components/ui/textarea"
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
 
 function Contact(){
     const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_LINK);
@@ -15,40 +18,15 @@ function Contact(){
     }
 
     return (
-        <form style={{ position: 'relative' }} onSubmit={handleSubmit}>
-            <div className="flex flex-col gap-3 w-full justify-center items-center">
+        <form onSubmit={handleSubmit} className="p-4 text-secondary">
+            <div className="flex flex-col gap-4 w-full justify-center items-center max-w-lg mx-auto">
                 <h2 className="text-white text-2xl">Get in touch</h2>
-                <input 
-                    disabled={state.submitting || state.succeeded} 
-                    required 
-                    name="name" 
-                    placeholder="Name" 
-                    className="contactSectionName" 
-                    type="text" 
-                />
-                <input 
-                    disabled={state.submitting || state.succeeded} 
-                    required 
-                    name="email" 
-                    placeholder="Email" 
-                    className="contactSectionEmail" 
-                    type="email" 
-                />
-                <textarea 
-                    disabled={state.submitting || state.succeeded} 
-                    required 
-                    name="message" 
-                    placeholder="Message" 
-                    className="contactSectionMessage" 
-                    style={{ resize: 'none' }} 
-                />
-                <button 
-                    disabled={state.submitting || state.succeeded} 
-                    type="submit" 
-                    className="sendButton"
-                >
+                <Input disabled={state.submitting || state.succeeded} required name="name" type='text' placeholder="Name"/>
+                <Input disabled={state.submitting || state.succeeded} required name="email" type='email' placeholder="Email"/>
+                <Textarea disabled={state.submitting || state.succeeded} required name="message" placeholder="Message"/>
+                <Button variant="outline" disabled={state.submitting || state.succeeded} type="submit">
                     {buttonText}
-                </button>
+                </Button>
             </div>
         </form>
     );

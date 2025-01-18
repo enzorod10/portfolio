@@ -6,6 +6,7 @@ import Contact from '../src/components/Contact';
 import Head from 'next/head';
 import { projects } from '../src/data';
 import { ProjectLargeView, ProjectSmallView, OpenedProject } from '../src/components/Project';
+import { ThemeProvider } from "@/components/theme-provider"
 
 function App({ windowSize }) {
     // Depending on scroll location, header will hide or show
@@ -61,27 +62,34 @@ function App({ windowSize }) {
       <Head>
         <title>Portfolio</title>
       </Head>
-      <div className="App">
-        <Intro scrollIntoDiv={scrollIntoDiv}/>
-        <PortfolioHeader windowSize={windowSize} scrollIntoDiv={scrollIntoDiv} />
-        <div className='aboutSection'>
-          <About/>
-        </div>
-        <div className='mainSection'>
-            {openProject && <OpenedProject project={openProject} setOpenProject={setOpenProject}/>}
-            {projects.map((project, index) => {
-              return (
-                windowSize.width < 640 ? <ProjectSmallView key={project.name} project={project} setOpenProject={setOpenProject}/> : 
-                <ProjectLargeView key={project.name} project={project} isEven={index % 2 === 0}/>
-              )
-            })}
-          <div className='projectOverlay'>
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+        <div className="App">
+          <Intro scrollIntoDiv={scrollIntoDiv}/>
+          <PortfolioHeader windowSize={windowSize} scrollIntoDiv={scrollIntoDiv} />
+          <div className='aboutSection'>
+            <About/>
+          </div>
+          <div className='mainSection'>
+              {openProject && <OpenedProject project={openProject} setOpenProject={setOpenProject}/>}
+              {projects.map((project, index) => {
+                return (
+                  windowSize.width < 640 ? <ProjectSmallView key={project.name} project={project} setOpenProject={setOpenProject}/> : 
+                  <ProjectLargeView key={project.name} project={project} isEven={index % 2 === 0}/>
+                )
+              })}
+            <div className='projectOverlay'>
+            </div>
+          </div>
+          <div className='contactSection'>
+            <Contact />
           </div>
         </div>
-        <div className='contactSection'>
-          <Contact />
-        </div>
-      </div>
+      </ThemeProvider>
     </>
   );
 }
