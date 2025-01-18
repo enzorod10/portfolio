@@ -6,7 +6,6 @@ import Contact from '../src/components/Contact';
 import Head from 'next/head';
 import { projects } from '../src/data';
 import { ProjectLargeView, ProjectSmallView, OpenedProject } from '../src/components/Project';
-import { ThemeProvider } from "@/components/theme-provider"
 
 function App({ windowSize }) {
     // Depending on scroll location, header will hide or show
@@ -58,12 +57,6 @@ function App({ windowSize }) {
       <Head>
         <title>Portfolio</title>
       </Head>
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-      >
         <div className="App">
           <Intro scrollIntoDiv={scrollIntoDiv}/>
           <PortfolioHeader windowSize={windowSize} scrollIntoDiv={scrollIntoDiv} />
@@ -85,7 +78,6 @@ function App({ windowSize }) {
             <Contact />
           </div>
         </div>
-      </ThemeProvider>
     </>
   );
 }

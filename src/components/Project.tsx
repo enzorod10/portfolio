@@ -14,9 +14,9 @@ import { Button } from './ui/button';
 function ProjectLargeView({ project, isEven }: { project: ProjectType, isEven: boolean  }) {
     return(
         <div>
-          <div className={`flex ${isEven ? 'flex-row' : 'flex-row-reverse'} justify-center items-center sm:p-4 md:p-12 text-secondary`}>
+          <div className={`flex ${isEven ? 'flex-row' : 'flex-row-reverse'} justify-center items-center sm:p-4 md:p-12 `}>
             <div className={`w-full max-w-lg ${ isEven ? '-mr-5' : '-ml-5'}`}>
-              <div className='flex justify-center items-center bg-[#0079897c] sm:bg-primary w-fit p-0.5 text-lg rounded sm:rounded-none sm:rounded-t mx-auto w-full sm:w-3/4'>
+              <div className='flex justify-center items-center bg-[#0079897c] w-fit p-0.5 text-lg rounded sm:rounded-none sm:rounded-t mx-auto w-full sm:w-3/4 text-white'>
                 {project.name}
               </div>
               <div className='relative flex flex-col h-full bg-slate-100 gap-2 px-4 rounded shadow-lg'>
@@ -46,7 +46,7 @@ function ProjectLargeView({ project, isEven }: { project: ProjectType, isEven: b
 
 const ProjectSmallView = ({ project, setOpenProject}: { project: ProjectType, setOpenProject }) => {
   return(
-    <div className='flex justify-center items-center'>
+    <div className='flex justify-center items-center text-white'>
       <div onClick={() => setOpenProject(project)} className='w-full max-w-lg'>
         <div className='flex justify-center items-center bg-[#0079897c] w-fit p-0.5 text-lg rounded mx-auto w-full'>
           {project.name}
@@ -62,7 +62,7 @@ const OpenedProject = ({ project, setOpenProject }: { project: ProjectType, setO
 
   return (
       <Dialog open={open} onOpenChange={onSetOpen}>
-        <DialogContent onInteractOutside={e => e.preventDefault()} className='bg-foreground text-secondary'>
+        <DialogContent onInteractOutside={e => e.preventDefault()} className='border-none'>
           <DialogHeader>
             <div className='flex justify-between items-center'>
               <DialogTitle>{project.name}</DialogTitle>

@@ -21,7 +21,7 @@ function About(){
             </div>
             <div className="flex justify-center">
                 <div className='relative flex flex-wrap border border-[#0079897c] rounded-lg justify-center p-5 gap-5 w-full max-w-2xl'>
-                    <div className='absolute -top-4 bg-background text-white p-1 px-2 rounded-lg'>
+                    <div className='absolute -top-4 bg-black text-white p-1 px-2 rounded-lg'>
                         Languages & Tools
                     </div>
                     {technologiesUsed.map((tech, index) => {

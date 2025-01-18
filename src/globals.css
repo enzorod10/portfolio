@@ -80,6 +80,7 @@
 html,body{
     position: relative;
     overflow-x: clip;
+    background-color: rgb(0, 0, 0);
 }
 
 /* --------- Intro Section --------- */
