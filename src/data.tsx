@@ -91,3 +91,13 @@ export const projects: Project[] = [
         techUsed: createTechnologiesArr(['React', 'Firebase'])
     },
 ]
+
+const upcomingProj = {
+    name: 'BudgetWise',
+    pc_image: '/solteract.PNG',
+    mobile_images: ['/solteract.PNG'],
+    info: 'A social media platform that gives users the ability to express themselves in their own personal space. Inspired by twitter. Users have their own timelines & feeds, are able to communicate with each other through transmissions (tweets) which can be text and/or media.',
+    liveLink: 'https://soterak-1f634.web.app/',
+    codeLink: 'https://github.com/enzorod10/solteract',
+    techUsed: createTechnologiesArr(['React', 'Firebase'])
+}
