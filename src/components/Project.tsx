@@ -22,7 +22,7 @@ function ProjectLargeView({ project, isEven }: { project: ProjectType, isEven: b
               <div className='relative flex flex-col h-full bg-slate-100 gap-2 px-4 rounded shadow-lg'>
                 <div className='flex justify-around border-b border-slate-900 py-2'>
                   <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href={project.liveLink}> <img style={{width: '16px'}} src={'/assets/linkIcon.png'} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href={project.liveLink}>Live</a></div>
-                  <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href={project.codeLink}> <img style={{width: '16px'}} src={'/assets/githubRepoLink.png'} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href={project.codeLink}>Repo</a></div>
+                  {project.codeLink.trim() !== '' && <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href={project.codeLink}> <img style={{width: '16px'}} src={'/assets/githubRepoLink.png'} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href={project.codeLink}>Repo</a></div>}
                 </div>
                 {project.info}
                 <div className='p-2 flex items-center justify-evenly border-t border-slate-900'>

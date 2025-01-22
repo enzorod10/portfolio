@@ -41,7 +41,6 @@ export const technologiesUsed: Tech[] = [
         name: 'Git',
         image: '/stackImages/gitIcon.svg'
     },
-
     {
         name: 'Jest',
         image: '/stackImages/jestIcon.svg'
@@ -82,6 +81,15 @@ export const projects: Project[] = [
         techUsed: createTechnologiesArr(['Next', 'Tailwind'])
     },
     {
+        name: 'BudgetWise',
+        pc_image: '/budget_wise.PNG',
+        mobile_images: ['/budget_wise.PNG'],
+        info: 'A finance app that helps users track their spending, set budgets, and achieve financial goals. Features include a dashboard with real-time analytics, customizable categories, and a user-friendly interface for managing expenses.',
+        liveLink: 'https://budgetwise.co/',
+        codeLink: '',
+        techUsed: createTechnologiesArr(['Firebase'])
+    },
+    {
         name: 'Solteract',
         pc_image: '/solteract.PNG',
         mobile_images: ['/solteract.PNG'],
@@ -91,13 +99,3 @@ export const projects: Project[] = [
         techUsed: createTechnologiesArr(['React', 'Firebase'])
     },
 ]
-
-const upcomingProj = {
-    name: 'BudgetWise',
-    pc_image: '/solteract.PNG',
-    mobile_images: ['/solteract.PNG'],
-    info: 'A social media platform that gives users the ability to express themselves in their own personal space. Inspired by twitter. Users have their own timelines & feeds, are able to communicate with each other through transmissions (tweets) which can be text and/or media.',
-    liveLink: 'https://soterak-1f634.web.app/',
-    codeLink: 'https://github.com/enzorod10/solteract',
-    techUsed: createTechnologiesArr(['React', 'Firebase'])
-}
