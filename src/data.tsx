@@ -83,7 +83,7 @@ export const projects: Project[] = [
     {
         name: 'BudgetWise',
         pc_image: '/budget_wise.PNG',
-        mobile_images: ['/budget_wise.PNG'],
+        mobile_images: ['/budget_wise.PNG', '/budget_wise_mobile_0.PNG'],
         info: 'A finance app that helps users track their spending, set budgets, and achieve financial goals. Features include a dashboard with real-time analytics, customizable categories, and a user-friendly interface for managing expenses.',
         liveLink: 'https://budgetwise.co/',
         codeLink: '',
