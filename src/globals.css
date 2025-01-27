@@ -609,7 +609,6 @@ html,body{
     .nameLine,
     .titleLine{
         animation: 1.3s ease-out 0s 1 nameline;
-        border-width: 3px;
     }
 
     .nameLine .link:nth-child(1){
