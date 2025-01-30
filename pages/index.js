@@ -56,6 +56,7 @@ function App({ windowSize }) {
     <>
       <Head>
         <title>Portfolio</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
         <div className="App">
           <Intro scrollIntoDiv={scrollIntoDiv}/>
