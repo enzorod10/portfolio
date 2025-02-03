@@ -55,7 +55,7 @@ function App({ windowSize }) {
   return (
     <>
       <Head>
-        <title>Portfolio</title>
+        <title>Enzo's Portfolio</title>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
         <div className="App">

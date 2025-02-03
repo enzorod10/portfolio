@@ -7,7 +7,7 @@ function PortfolioHeader(props){
         <div className='logo' >
           <img className='h-full w-24 sm:w-32' src={logo.src} alt='Enzo Logo' />
         </div>
-        <div className='text-black directory text-lg hidden sm:flex items-center'>
+        <div className='text-black directory font-black text-lg hidden sm:flex items-center'>
           <div onClick={() => props.scrollIntoDiv('about')}>
             ABOUT
           </div>
