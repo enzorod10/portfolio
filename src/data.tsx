@@ -59,7 +59,7 @@ export const projects: Project[] = [
         mobile_images: ['/kick_realm_mobile_0.PNG', '/kick_realm_mobile_1.PNG', '/kick_realm_mobile_2.PNG'],
         info: 'A platform for Kick streamers and viewers, where users can invest in streamers using virtual currency, track real-time analytics, and view upcoming stream schedules. Streamers can apply for affiliation, and users can apply for admin or mod roles, fostering a vibrant and interactive community.',
         liveLink: 'https://www.kickrealm.com/',
-        codeLink: 'https://github.com/enzorod10/kickrealm',
+        codeLink: '',
         techUsed: createTechnologiesArr(['Next', 'Tailwind', 'Supabase', 'PostgreSQL'])
     },
     {
