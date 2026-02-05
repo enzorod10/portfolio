@@ -21,8 +21,20 @@ function ProjectLargeView({ project, isEven }: { project: ProjectType, isEven: b
               </div>
               <div className='relative flex flex-col h-full bg-slate-100 gap-2 px-4 rounded shadow-lg'>
                 <div className='flex justify-around border-b border-slate-900 py-2'>
-                  <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href={project.liveLink}> <img style={{width: '16px'}} src={'/assets/linkIcon.png'} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href={project.liveLink}>Live</a></div>
-                  {project.codeLink.trim() !== '' && <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href={project.codeLink}> <img style={{width: '16px'}} src={'/assets/githubRepoLink.png'} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href={project.codeLink}>Repo</a></div>}
+                  <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}>
+                    <a href={project.liveLink} target="_blank" rel="noreferrer" aria-label={`Open ${project.name} live site`}>
+                      <img style={{width: '16px'}} src={'/assets/linkIcon.png'} alt='Link to live website'/>
+                    </a>
+                    <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href={project.liveLink} target="_blank" rel="noreferrer">Live</a>
+                  </div>
+                  {project.codeLink.trim() !== '' && (
+                    <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}>
+                      <a href={project.codeLink} target="_blank" rel="noreferrer" aria-label={`Open ${project.name} repository`}>
+                        <img style={{width: '16px'}} src={'/assets/githubRepoLink.png'} alt='Link to project repository'/>
+                      </a>
+                      <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href={project.codeLink} target="_blank" rel="noreferrer">Repo</a>
+                    </div>
+                  )}
                 </div>
                 {project.info}
                 <div className='p-2 flex items-center justify-evenly border-t border-slate-900'>
@@ -47,11 +59,16 @@ function ProjectLargeView({ project, isEven }: { project: ProjectType, isEven: b
 const ProjectSmallView = ({ project, setOpenProject}: { project: ProjectType, setOpenProject }) => {
   return(
     <div className='flex justify-center items-center text-white'>
-      <div onClick={() => setOpenProject(project)} className='w-full max-w-lg'>
+      <button
+        type="button"
+        onClick={() => setOpenProject(project)}
+        className='w-full max-w-lg'
+        aria-label={`Open details for ${project.name}`}
+      >
         <div className='flex justify-center items-center bg-[#0079897c] w-fit p-0.5 text-lg rounded mx-auto w-full'>
           {project.name}
         </div>
-      </div>
+      </button>
     </div>
   )
 }
@@ -67,8 +84,18 @@ const OpenedProject = ({ project, setOpenProject }: { project: ProjectType, setO
             <div className='flex justify-between items-center'>
               <DialogTitle>{project.name}</DialogTitle>
               <div className='flex justify-around gap-4'>
-                <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href={project.liveLink}> <img style={{width: '16px'}} src={'/assets/linkIcon.png'} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href={project.liveLink}>Live</a></div>
-                <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}> <a href={project.codeLink}> <img style={{width: '16px'}} src={'/assets/githubRepoLink.png'} alt='Link to live website'/> </a> <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href={project.codeLink}>Repo</a></div>
+                <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}>
+                  <a href={project.liveLink} target="_blank" rel="noreferrer" aria-label={`Open ${project.name} live site`}>
+                    <img style={{width: '16px'}} src={'/assets/linkIcon.png'} alt='Link to live website'/>
+                  </a>
+                  <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href={project.liveLink} target="_blank" rel="noreferrer">Live</a>
+                </div>
+                <div style={{display: 'flex', alignItems: 'center', gap: '5px'}}>
+                  <a href={project.codeLink} target="_blank" rel="noreferrer" aria-label={`Open ${project.name} repository`}>
+                    <img style={{width: '16px'}} src={'/assets/githubRepoLink.png'} alt='Link to project repository'/>
+                  </a>
+                  <a style={{textUnderlineOffset: '2px', color: '#0c0032'}} href={project.codeLink} target="_blank" rel="noreferrer">Repo</a>
+                </div>
               </div>
             </div>
             <DialogDescription className='text-left'>
@@ -81,7 +108,16 @@ const OpenedProject = ({ project, setOpenProject }: { project: ProjectType, setO
               <div className='flex justify-center gap-2'>
                 {project.mobile_images.map((image, index) => {
                   return (
-                    <img onClick={() => setHighlightedIndex(index)} key={index} src={image} className={`h-12 ${highlightedIndex === index ? 'border border-slate-900 p-0.5' : ''} w-12 rounded-md`} />
+                    <button
+                      key={index}
+                      type="button"
+                      onClick={() => setHighlightedIndex(index)}
+                      className={`h-12 w-12 rounded-md ${highlightedIndex === index ? 'border border-slate-900 p-0.5' : 'border border-transparent'}`}
+                      aria-label={`View ${project.name} screenshot ${index + 1}`}
+                      aria-pressed={highlightedIndex === index}
+                    >
+                      <img src={image} className='h-full w-full rounded-md' alt={`${project.name} mobile screenshot ${index + 1}`} />
+                    </button>
                   )
                 })}
               </div>

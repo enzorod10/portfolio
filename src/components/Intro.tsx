@@ -23,21 +23,36 @@ function Intro(props){
               <div className='hangingLinks'>
                 <div className='link'>
                   <div className='hanger'></div>
-                  <div className='icon' onClick={() => props.scrollIntoDiv('about')}> 
+                  <button
+                    className='icon'
+                    type="button"
+                    onClick={() => props.scrollIntoDiv('about')}
+                    aria-label="Scroll to about section"
+                  >
                     <img src={aboutIcon.src} alt='About icon' />
-                  </div>
+                  </button>
                 </div>
                 <div className='link'>
                   <div className='hanger'></div>
-                  <div className='icon' onClick={() => props.scrollIntoDiv('projects')}> 
+                  <button
+                    className='icon'
+                    type="button"
+                    onClick={() => props.scrollIntoDiv('projects')}
+                    aria-label="Scroll to projects section"
+                  >
                     <img src={folderIcon.src} alt='Folder icon' />
-                  </div>
+                  </button>
                 </div>
                 <div className='link'>
                   <div className='hanger'></div>
-                  <div className='icon' onClick={() => props.scrollIntoDiv('contact')}> 
+                  <button
+                    className='icon'
+                    type="button"
+                    onClick={() => props.scrollIntoDiv('contact')}
+                    aria-label="Scroll to contact section"
+                  >
                     <img src={mailIcon.src} alt='Mail icon' />
-                  </div>
+                  </button>
                 </div>
               </div>
             </span>
@@ -47,7 +62,12 @@ function Intro(props){
               <div className='hangingLinks'>
                 <div className='link'>
                   <div className='hanger'></div>
-                  <a href={'https://github.com/enzorod10'}>
+                  <a
+                    href={'https://github.com/enzorod10'}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Visit Enzo Rodriguez on GitHub"
+                  >
                     <div className='icon'>
                       <img src={githubIcon.src} alt='Github icon' />
                     </div>
@@ -55,7 +75,12 @@ function Intro(props){
                 </div>
                   <div className='link'>
                     <div className='hanger'></div>
-                    <a href={'https://linkedin.com/in/enzo-rod'}>
+                    <a
+                      href={'https://linkedin.com/in/enzo-rod'}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Visit Enzo Rodriguez on LinkedIn"
+                    >
                       <div className='icon'>
                         <img src={linkedinIcon.src} alt='Linkedin icon' />
                       </div>
@@ -63,7 +88,12 @@ function Intro(props){
                   </div>
                 <div className='link'>
                   <div className='hanger'></div>
-                    <a href={'https://x.com/enzodevtech'}>
+                    <a
+                      href={'https://x.com/enzodevtech'}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Visit Enzo Rodriguez on X"
+                    >
                       <div className='icon'>
                         <img src={xIcon.src} alt='X(Twitter) icon' />
                       </div>
