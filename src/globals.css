@@ -368,10 +368,16 @@ html,body{
     align-items: center;
     border-radius: 3px;
     cursor: pointer;
+    background: transparent;
 }
 
 .icon > img{
     width: 28px;
+}
+
+.icon:focus-visible{
+    outline: 3px solid #00bcd4;
+    outline-offset: 3px;
 }
 
 /* --------- Main Section --------- */
